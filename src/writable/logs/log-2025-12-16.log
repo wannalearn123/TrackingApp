@@ -1,0 +1,1598 @@
+ERROR - 2025-12-16 08:44:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 D:\OTODIDAK\Tracking App\src\app\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+#6 D:\OTODIDAK\Tracking App\src\app\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-16 08:44:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: CLI, Route: check:inactive]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 465.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*
+FROM `users`
+LEFT JOIN `training_activities` ON `training_activities`.`user_id` = `users`.`id`
+WHERE `users`.`role` = :users.role:
+AND `users`.`is_approved` = :users.is_approved:
+AND `users`.`deleted_at` IS NULL
+GROUP BY `users`.`id`
+HAVING MAX(training_activities.activity_date) < :MAX(training_activities.activity_date):
+OR MAX(training_activities.activity_date) IS NULL', [...], false)
+ 3 VENDORPATH\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+ 7 VENDORPATH\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run([])
+ 8 VENDORPATH\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', [])
+ 9 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2025-12-16 08:45:38 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 D:\OTODIDAK\Tracking App\src\app\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+#6 D:\OTODIDAK\Tracking App\src\app\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-12-16 08:45:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: CLI, Route: check:inactive]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 465.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*
+FROM `users`
+LEFT JOIN `training_activities` ON `training_activities`.`user_id` = `users`.`id`
+WHERE `users`.`role` = :users.role:
+AND `users`.`is_approved` = :users.is_approved:
+AND `users`.`deleted_at` IS NULL
+GROUP BY `users`.`id`
+HAVING MAX(training_activities.activity_date) < :MAX(training_activities.activity_date):
+OR MAX(training_activities.activity_date) IS NULL', [...], false)
+ 3 VENDORPATH\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(112): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Commands\CheckInactiveUsersCommand.php(24): App\Models\UserModel->getInactiveUsers(7)
+ 7 VENDORPATH\codeigniter4\framework\system\CLI\Commands.php(74): App\Commands\CheckInactiveUsersCommand->run([])
+ 8 VENDORPATH\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('check:inactive', [])
+ 9 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2025-12-16 08:51:34 --> mysqli_sql_exception: Can't create database 'db_trackingapp'; database exists in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE DATABASE...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(232): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\CreateDatabase.php(136): CodeIgniter\Database\Forge->createDatabase('db_trackingapp')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', Array)
+#7 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+ERROR - 2025-12-16 08:52:00 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 08:52:07 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 08:53:14 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 08:54:55 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 08:57:24 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 08:58:10 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_trackingapp', 3306, '', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-12-16 08:58:47 --> mysqli_sql_exception: Duplicate key name 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065100_Createusertable.php(64): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateUsersTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-16 09:08:33 --> ErrorException: Type of App\Controllers\BaseController::$request must not be defined (as in class CodeIgniter\Controller)
+[Method: GET, Route: /]
+in APPPATH\Controllers\BaseController.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-12-16 09:09:14 --> ErrorException: Type of App\Controllers\BaseController::$request must not be defined (as in class CodeIgniter\Controller)
+[Method: GET, Route: /]
+in APPPATH\Controllers\BaseController.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-12-16 09:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:14:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth\LoginController.php(28): view('auth/login')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\LoginController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:22:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth\LoginController.php(28): view('auth/login')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\LoginController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:23:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth\LoginController.php(28): view('auth/login')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\LoginController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:23:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth\LoginController.php(28): view('auth/login')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\LoginController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:40:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: login]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth\LoginController.php(28): view('auth/login')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\LoginController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\LoginController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 09:54:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/register.php"
+[Method: GET, Route: register]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/register.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/register', [], true)
+ 3 APPPATH\Controllers\Auth\RegisterController.php(28): view('auth/register')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Auth\RegisterController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\RegisterController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 09:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 09:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 10:28:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/dashboard.php"
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/dashboard.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 3 APPPATH\Controllers\Admin\DashboardController.php(39): view('admin/dashboard', [...])
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 10:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 10:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 12:50:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/dashboard.php"
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/dashboard.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 3 APPPATH\Controllers\Admin\DashboardController.php(39): view('admin/dashboard', [...])
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 12:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 12:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:39:48 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ad...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\OTODIDAK\Tracking App\src\app\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert(Array)
+#8 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+#10 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+#11 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#16 {main}
+CRITICAL - 2025-12-16 13:39:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: GET, Route: admin/users/approve/2]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:39:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 13:39:48\', \'2025-12-16 13:39:48\')')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 13:39:48\', \'2025-12-16 13:39:48\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:39:48 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 13:39:48\', \'2025-12-16 13:39:48\')', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 13:39:48\', \'2025-12-16 13:39:48\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 13:39:48\', \'2025-12-16 13:39:48\')')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+12 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 13:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:45:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_trackingapp', 3306, '', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-12-16 13:45:57 --> mysqli_sql_exception: Can't create table `db_trackingapp`.`user_physical_data` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065227_CreatePhysicalDataTable.php(66): CodeIgniter\Database\Forge->createTable('user_physical_d...')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreatePhysicalDataTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 13:49:54 --> mysqli_sql_exception: Can't create table `db_trackingapp`.`admin_activity_logs` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `a...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065653_CreateAdminActivityLogsTable.php(46): CodeIgniter\Database\Forge->createTable('admin_activity_...')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateAdminActivityLogsTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 13:51:01 --> mysqli_sql_exception: Can't create table `db_trackingapp`.`admin_activity_logs` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `a...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065653_CreateAdminActivityLogsTable.php(46): CodeIgniter\Database\Forge->createTable('admin_activity_...')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateAdminActivityLogsTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 13:51:13 --> mysqli_sql_exception: Can't create table `db_trackingapp`.`admin_activity_logs` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `a...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-065653_CreateAdminActivityLogsTable.php(46): CodeIgniter\Database\Forge->createTable('admin_activity_...')
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\CreateAdminActivityLogsTable->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-16 13:55:10 --> mysqli_sql_exception: Unknown column 'password_hash' in 'field list' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Seeds\AdminSeeder.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Seeder.php(149): App\Database\Seeds\AdminSeeder->run()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+DEBUG - 2025-12-16 13:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:57:33 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 13:57:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:33 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 13:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:57:35 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 13:57:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:35 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 13:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:57:51 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 13:57:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:57:51 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 13:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:58:19 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 13:58:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:58:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:58:19 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 13:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 13:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 13:59:15 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 13:59:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:59:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 13:59:15 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 14:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 14:33:42 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 14:33:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 14:33:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 14:33:42 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 14:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 14:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 14:33:56 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 D:\OTODIDAK\Tracking App\src\app\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-16 14:33:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 4 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 14:33:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 6 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 14:33:56 --> [Caused by] mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = \'user\'
+AND `is_approved` = 1
+AND `is_active` = 1
+AND `users`.`deleted_at` IS NULL')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `users`
+WHERE `role` = :role:
+AND `is_approved` = :is_approved:
+AND `is_active` = :is_active:
+AND `users`.`deleted_at` IS NULL', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\UserModel.php(73): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Admin\DashboardController.php(30): App\Models\UserModel->getActiveUsersCount()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+ERROR - 2025-12-16 14:36:45 --> mysqli_sql_exception: Unknown column 'updated_at' in 'admin_activity_logs' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('ALTER TABLE `ad...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `ad...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `ad...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Forge.php(772): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `ad...')
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Migrations\2025-12-16-143628_AddDeletedAtToUsers.php(26): CodeIgniter\Database\Forge->addColumn('admin_activity_...', Array)
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(874): App\Database\Migrations\AddDeletedAtToUsers->up()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(180): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-12-16 14:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 14:38:02 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getActiveUsersCount
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Model.php on line 927.
+ 1 APPPATH\Controllers\Admin\DashboardController.php(30): CodeIgniter\Model->__call('getActiveUsersCount', [])
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 14:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 14:38:04 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getActiveUsersCount
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Model.php on line 927.
+ 1 APPPATH\Controllers\Admin\DashboardController.php(30): CodeIgniter\Model->__call('getActiveUsersCount', [])
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 14:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 14:40:19 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TrainingActivityModel::getActiveUsersToday
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Model.php on line 927.
+ 1 APPPATH\Controllers\Admin\DashboardController.php(32): CodeIgniter\Model->__call('getActiveUsersToday', [])
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 14:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 14:40:21 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TrainingActivityModel::getActiveUsersToday
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH\codeigniter4\framework\system\Model.php on line 927.
+ 1 APPPATH\Controllers\Admin\DashboardController.php(32): CodeIgniter\Model->__call('getActiveUsersToday', [])
+ 2 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\DashboardController))
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 15:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 15:04:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "welcome_message.php"
+[Method: GET, Route: /]
+in VENDORPATH\codeigniter4\framework\system\Exceptions\FrameworkException.php on line 39.
+ 1 VENDORPATH\codeigniter4\framework\system\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome_message.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('welcome_message', [], true)
+ 3 APPPATH\Controllers\Home.php(20): view('welcome_message')
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 15:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 15:08:54 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ad...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\OTODIDAK\Tracking App\src\app\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert(Array)
+#8 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+#10 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+#11 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#16 {main}
+CRITICAL - 2025-12-16 15:08:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: GET, Route: admin/users/approve/2]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 15:08:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 15:08:54\', \'2025-12-16 15:08:54\')')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 15:08:54\', \'2025-12-16 15:08:54\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 15:08:54 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 15:08:54\', \'2025-12-16 15:08:54\')', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 15:08:54\', \'2025-12-16 15:08:54\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'2\', \'{\\"username\\":\\"testuser1\\"}\', \'2025-12-16 15:08:54\', \'2025-12-16 15:08:54\')')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '2', [...])
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('2')
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+12 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 15:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 15:11:08 --> ErrorException: Undefined variable $unread_count
+[Method: GET, Route: user/notifications]
+in APPPATH\Views\user\notifications.php on line 16.
+ 1 APPPATH\Views\user\notifications.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unread_count', 'D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php', 16)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/notifications', [], true)
+ 5 APPPATH\Controllers\User\NotificationController.php(29): view('user/notifications', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\User\NotificationController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\NotificationController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 15:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 15:12:48 --> ErrorException: Undefined variable $unread_count
+[Method: GET, Route: user/notifications]
+in APPPATH\Views\user\notifications.php on line 16.
+ 1 APPPATH\Views\user\notifications.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unread_count', 'D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php', 16)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/notifications', [], true)
+ 5 APPPATH\Controllers\User\NotificationController.php(29): view('user/notifications', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\User\NotificationController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\NotificationController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 15:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
