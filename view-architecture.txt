@@ -1,0 +1,30 @@
+app/Views/
+├── layouts/
+│   ├── main.php              # Base layout untuk semua halaman
+│   ├── admin_layout.php      # Layout khusus admin
+│   └── user_layout.php       # Layout khusus user
+├── components/
+│   ├── navbar.php            # Navbar component
+│   ├── sidebar_admin.php     # Sidebar untuk admin
+│   ├── sidebar_user.php      # Sidebar untuk user
+│   └── footer.php            # Footer component
+├── auth/
+│   ├── login.php             ✅ Sudah ada
+│   ├── register.php
+│   └── waiting_approval.php
+├── admin/
+│   ├── dashboard.php
+│   ├── users/
+│   │   ├── index.php
+│   │   └── physical_data_form.php
+│   └── monitoring/
+│       ├── activities_list.php
+│       └── user_detail.php
+└── user/
+    ├── dashboard.php
+    ├── training/
+    │   ├── start.php
+    │   ├── summary.php
+    │   └── detail.php
+    ├── history.php
+    └── notifications.php

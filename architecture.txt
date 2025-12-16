@@ -1,0 +1,85 @@
+tracking-app/
+├── app/
+│   ├── Config/
+│   │   ├── Routes.php
+│   │   ├── Filters.php
+│   │   └── App.php
+│   ├── Controllers/
+│   │   ├── Auth/
+│   │   │   ├── LoginController.php
+│   │   │   ├── RegisterController.php
+│   │   │   └── LogoutController.php
+│   │   ├── Admin/
+│   │   │   ├── DashboardController.php
+│   │   │   ├── UserManagementController.php
+│   │   │   ├── PhysicalDataController.php
+│   │   │   ├── MonitoringController.php
+│   │   │   └── ReportExportController.php
+│   │   └── User/
+│   │       ├── DashboardController.php
+│   │       ├── TrainingController.php
+│   │       ├── HistoryController.php
+│   │       └── NotificationController.php
+│   ├── Models/
+│   │   ├── UserModel.php
+│   │   ├── PhysicalDataModel.php
+│   │   ├── TrainingActivityModel.php
+│   │   ├── NotificationModel.php
+│   │   └── AdminActivityLogModel.php
+│   ├── Libraries/
+│   │   ├── BMICalculator.php
+│   │   ├── NotificationService.php
+│   │   └── PDFExporter.php (menggunakan TCPDF atau Dompdf)
+│   ├── Filters/
+│   │   ├── AuthFilter.php
+│   │   ├── AdminFilter.php
+│   │   └── UserFilter.php
+│   ├── Helpers/
+│   │   ├── bmi_helper.php
+│   │   └── distance_helper.php
+│   ├── Views/
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   └── register.php
+│   │   ├── admin/
+│   │   │   ├── dashboard.php
+│   │   │   ├── users/
+│   │   │   │   ├── index.php
+│   │   │   │   ├── approve.php
+│   │   │   │   └── physical_data_form.php
+│   │   │   ├── monitoring/
+│   │   │   │   ├── activities_list.php
+│   │   │   │   └── user_detail.php
+│   │   │   └── layouts/
+│   │   │       └── admin_template.php
+│   │   └── user/
+│   │       ├── dashboard.php
+│   │       ├── training/
+│   │       │   ├── start.php
+│   │       │   └── summary.php
+│   │       ├── history.php
+│   │       └── layouts/
+│   │           └── user_template.php
+│   ├── Database/
+│   │   ├── Migrations/
+│   │   │   ├── 2025-01-01-000001_CreateUsersTable.php
+│   │   │   ├── 2025-01-01-000002_CreatePhysicalDataTable.php
+│   │   │   ├── 2025-01-01-000003_CreateTrainingActivitiesTable.php
+│   │   │   ├── 2025-01-01-000004_CreateNotificationsTable.php
+│   │   │   └── 2025-01-01-000005_CreateAdminActivityLogsTable.php
+│   │   └── Seeds/
+│   │       └── AdminSeeder.php
+│   └── Commands/
+│       └── CheckInactiveUsersCommand.php (cron job untuk alert 7 hari)
+├── public/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   │   └── gps-tracker.js (Leaflet.js atau Google Maps API)
+│   │   └── img/
+│   └── index.php
+├── writable/
+│   └── logs/
+├── vendor/
+├── composer.json
+└── .env
