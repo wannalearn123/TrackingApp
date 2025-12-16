@@ -27,8 +27,9 @@ class DashboardController extends BaseController
     {
         // Get statistics
         $data = [
-            'total_users'       => $this->userModel->getActiveUsersCount(),
+            'total_users'       => $this->userModel->getTotalUsersCount(),
             'pending_users'     => count($this->userModel->getPendingUsers()),
+            'approved_users'    => $this->userModel->getApprovedUsersCount(),
             'active_users'      => $this->trainingActivityModel->getActiveUsersToday(),
             'completion_rate'   => $this->trainingActivityModel->getWeeklyCompletionRate(),
             'bmi_stats'         => $this->physicalDataModel->getBMIStatistics(),

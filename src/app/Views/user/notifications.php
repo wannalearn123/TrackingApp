@@ -13,10 +13,10 @@ $this->section('page_content');
                     <i class="fas fa-bell me-2"></i> Notifikasi
                 </h2>
                 <p class="text-muted mb-0">
-                    <?= $unread_count ?> notifikasi belum dibaca
+                    <?= $unreadCount ?> notifikasi belum dibaca
                 </p>
             </div>
-            <?php if ($unread_count > 0): ?>
+            <?php if ($unreadCount > 0): ?>
                 <form method="POST" action="<?= base_url('user/notifications/mark-all-read') ?>">
                     <?= csrf_field() ?>
                     <button type="submit" class="btn btn-outline-primary">
@@ -36,7 +36,7 @@ $this->section('page_content');
         </li>
         <li class="nav-item">
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#unread" type="button">
-                <i class="fas fa-envelope me-2"></i> Belum Dibaca (<?= $unread_count ?>)
+                <i class="fas fa-envelope me-2"></i> Belum Dibaca (<?= $unreadCount ?>)
             </button>
         </li>
     </ul>

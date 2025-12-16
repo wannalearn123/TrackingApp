@@ -1596,3 +1596,151 @@ DEBUG - 2025-12-16 15:12:51 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-12-16 15:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-16 15:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-16 15:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 15:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-16 15:59:21 --> ErrorException: Undefined variable $unread_count
+[Method: GET, Route: user/notifications]
+in APPPATH\Views\user\notifications.php on line 16.
+ 1 APPPATH\Views\user\notifications.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unread_count', 'D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php', 16)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\user\\notifications.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('user/notifications', [], true)
+ 5 APPPATH\Controllers\User\NotificationController.php(29): view('user/notifications', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\User\NotificationController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\NotificationController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-16 16:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 16:07:30 --> mysqli_sql_exception: Duplicate entry 'admin' for key 'username' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\app\Database\Seeds\AdminSeeder.php(22): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\Seeder.php(149): App\Database\Seeds\AdminSeeder->run()
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\OTODIDAK\Tracking App\src\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+DEBUG - 2025-12-16 16:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-16 16:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-16 16:09:10 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ad...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\OTODIDAK\Tracking App\src\app\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert(Array)
+#8 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '3', Array)
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('3')
+#10 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+#11 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#16 {main}
+CRITICAL - 2025-12-16 16:09:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: GET, Route: admin/users/approve/3]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '3', [...])
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('3')
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 16:09:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'3\', \'{\\"username\\":\\"test1\\"}\', \'2025-12-16 16:09:10\', \'2025-12-16 16:09:10\')')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'3\', \'{\\"username\\":\\"test1\\"}\', \'2025-12-16 16:09:10\', \'2025-12-16 16:09:10\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '3', [...])
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('3')
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-16 16:09:10 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'3\', \'{\\"username\\":\\"test1\\"}\', \'2025-12-16 16:09:10\', \'2025-12-16 16:09:10\')', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'3\', \'{\\"username\\":\\"test1\\"}\', \'2025-12-16 16:09:10\', \'2025-12-16 16:09:10\')')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (\'1\', \'approved_user\', \'3\', \'{\\"username\\":\\"test1\\"}\', \'2025-12-16 16:09:10\', \'2025-12-16 16:09:10\')')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admin_activity_logs` (`admin_id`, `action`, `target_user_id`, `details`, `created_at`, `updated_at`) VALUES (:admin_id:, :action:, :target_user_id:, :details:, :created_at:, :updated_at:)', [...], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 VENDORPATH\codeigniter4\framework\system\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 VENDORPATH\codeigniter4\framework\system\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\AdminActivityLogModel.php(47): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Admin\UserManagementController.php(46): App\Models\AdminActivityLogModel->logAction('1', 'approved_user', '3', [...])
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\UserManagementController->approve('3')
+11 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserManagementController))
+12 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')

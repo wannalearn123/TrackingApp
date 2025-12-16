@@ -74,6 +74,28 @@ class UserModel extends Model
     }
 
     /**
+     * Get total users count (including pending)
+     */
+    public function getTotalUsersCount()
+    {
+        return $this->where('role', 'user')
+                    ->where('is_active', 1)
+                    ->countAllResults();
+    }
+
+    /**
+     * Get approved users count
+     */
+    public function getApprovedUsersCount()
+    {
+        return $this->where('role', 'user')
+                    ->where('is_approved', 1)
+                    ->where('is_active', 1)
+                    ->countAllResults();
+    }
+
+
+    /**
      * Approve user
      */
     public function approveUser($userId)
