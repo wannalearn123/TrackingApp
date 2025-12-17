@@ -30,8 +30,10 @@ class ReportExportController extends BaseController
     {
         // Gather dashboard data
         $data = [
-            'total_users'     => $this->userModel->getActiveUsersCount(),
-            'active_users'    => $this->trainingActivityModel->getActiveUsersToday(),
+            'total_users'     => $this->userModel->getTotalUsersCount(),
+            'pending_users'     => count($this->userModel->getPendingUsers()),
+            'approved_users'    => $this->userModel->getApprovedUsersCount(),
+            'active_users'    => $this->userModel->getActiveUsersCount(),
             'completion_rate' => $this->trainingActivityModel->getWeeklyCompletionRate(),
             'bmi_stats'       => $this->physicalDataModel->getBMIStatistics(),
         ];

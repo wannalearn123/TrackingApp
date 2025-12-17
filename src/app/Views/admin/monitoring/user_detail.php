@@ -154,12 +154,7 @@ $this->section('page_content');
                                     </td>
                                     <td>
                                         <span class="badge bg-success">
-                                            <?= number_format($activity['avg_speed'], 2) ?> km/h
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-warning text-dark">
-                                            <?= number_format($activity['calories_burned']) ?> kcal
+                                            <?= number_format($activity['avg_pace'], 2) ?> km/h
                                         </span>
                                     </td>
                                     <td>

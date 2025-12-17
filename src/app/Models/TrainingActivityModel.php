@@ -137,7 +137,7 @@ class TrainingActivityModel extends Model
      */
     public function getAllActivitiesWithUsers($limit = 50)
     {
-        return $this->select('training_activities.*, users.username, users.email')
+        return $this->select('training_activities.*, users.username, users.email, avg_pace')
                     ->join('users', 'users.id = training_activities.user_id')
                     ->orderBy('training_activities.activity_date', 'DESC')
                     ->limit($limit)

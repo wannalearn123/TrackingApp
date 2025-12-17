@@ -80,6 +80,8 @@ class PDFExporter
                     <td>Active Users</td>
                     <td>' . ($data['active_users'] ?? 0) . '</td>
                 </tr>
+                    <td>Pending Users</td>
+                    <td>' . ($data['pending_users'] ?? 0) . '</td>
                 <tr>
                     <td>Training Completion Rate</td>
                     <td>' . ($data['completion_rate'] ?? 0) . '%</td>

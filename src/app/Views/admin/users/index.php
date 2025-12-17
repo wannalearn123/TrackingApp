@@ -15,7 +15,7 @@ $this->section('page_content');
     <ul class="nav nav-tabs mb-4" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#approved" type="button">
-                <i class="fas fa-check-circle me-2"></i> Approved Users (<?= count($approved_users ?? []) ?>)
+                <i class="fas fa-check-circle me-2"></i> Approved Users (<?= count($users ?? []) ?>)
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -44,8 +44,8 @@ $this->section('page_content');
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if (!empty($approved_users)): ?>
-                                    <?php foreach ($approved_users as $user): ?>
+                                <?php if (!empty($users)): ?>
+                                    <?php foreach ($users as $user): ?>
                                         <tr>
                                             <td>
                                                 <i class="fas fa-user-circle me-2"></i>

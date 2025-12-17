@@ -22,7 +22,7 @@ $this->section('page_content');
             <div class="stat-card primary">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= $stats['total_users'] ?? 0 ?></h3>
+                        <h3 class="mb-0"><?= $total_users ?? 0 ?></h3>
                         <p class="mb-0">Total Users</p>
                     </div>
                     <i class="fas fa-users fa-3x opacity-50"></i>
@@ -34,7 +34,7 @@ $this->section('page_content');
             <div class="stat-card warning">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= $stats['pending_users'] ?? 0 ?></h3>
+                        <h3 class="mb-0"><?= $pending_users ?? 0 ?></h3>
                         <p class="mb-0">Pending Approval</p>
                     </div>
                     <i class="fas fa-clock fa-3x opacity-50"></i>
@@ -46,7 +46,7 @@ $this->section('page_content');
             <div class="stat-card success">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= $stats['active_users'] ?? 0 ?></h3>
+                        <h3 class="mb-0"><?= $active_users ?? 0 ?></h3>
                         <p class="mb-0">Active Today</p>
                     </div>
                     <i class="fas fa-running fa-3x opacity-50"></i>
@@ -58,7 +58,7 @@ $this->section('page_content');
             <div class="stat-card danger">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= $stats['completion_rate'] ?? 0 ?>%</h3>
+                        <h3 class="mb-0"><?= $completion_rate ?? 0 ?>%</h3>
                         <p class="mb-0">Completion Rate</p>
                     </div>
                     <i class="fas fa-chart-line fa-3x opacity-50"></i>

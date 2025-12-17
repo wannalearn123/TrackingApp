@@ -54,6 +54,7 @@ class UserManagementController extends BaseController
         } else {
             return redirect()->back()->with('error', 'Gagal menyetujui user');
         }
+        return redirect()->back();
     }
 
     /**

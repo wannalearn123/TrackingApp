@@ -67,7 +67,8 @@ class UserModel extends Model
      */
     public function getActiveUsersCount()
     {
-        return $this->where('role', 'user')
+        return $this->select('COUNT(DISTINCT users.id) as active_user_count')
+                    ->where('role', 'user')
                     ->where('is_approved', 1)
                     ->where('is_active', 1)
                     ->countAllResults();

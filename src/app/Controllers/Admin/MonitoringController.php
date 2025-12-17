@@ -26,9 +26,9 @@ class MonitoringController extends BaseController
     public function index()
     {
         $data = [
-            'activities' => $this->trainingActivityModel->getAllActivitiesWithUsers(50),
+            'activities' => $this->trainingActivityModel->getAllActivitiesWithUsers(),
         ];
-
+        
         return view('admin/monitoring/activities_list', $data);
     }
 
