@@ -192,17 +192,25 @@ $this->section('page_content');
 // Progress Chart
 const chartData = <?= json_encode($monthlyStats ?? ['labels' => [], 'distances' => []]) ?>;
 
+console.log(chartData);
+
+const bulanData = chartData.map(item => item.month);
+const jarakData = chartData.map(item => Number(item.total_distance));
+
+console.log(bulanData);
+console.log(jarakData);
+
 const ctx = document.getElementById('progressChart').getContext('2d');
 new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-        labels: chartData.labels,
+        labels: bulanData,
         datasets: [
             {
                 label: 'Jarak (km)',
-                data: chartData.distances,
-                borderColor: '#667eea',
-                backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                data: jarakData,
+                borderColor: '#385dffff',
+                backgroundColor: 'rgb(102, 126, 234)',
                 tension: 0.4,
                 fill: true
             },
@@ -223,7 +231,7 @@ new Chart(ctx, {
             x: {
                 title: {
                     display: true,
-                    text: 'Tanggal'
+                    text: 'Bulan'
                 }
             }
         }

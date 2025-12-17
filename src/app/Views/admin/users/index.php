@@ -39,6 +39,7 @@ $this->section('page_content');
                                     <th>Email</th>
                                     <th>Status</th>
                                     <th>Data Fisik</th>
+                                    <th>BMI Kategori</th>
                                     <th>Terdaftar</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -72,6 +73,13 @@ $this->section('page_content');
                                                     <span class="badge bg-warning">
                                                         <i class="fas fa-exclamation"></i> Belum Input
                                                     </span>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td>
+                                                <?php if (!empty($user['bmi_category'])): ?>
+                                                    <?= esc(ucfirst($user['bmi_category'])) ?>
+                                                <?php else: ?>
+                                                    <span class="text-muted">-</span>
                                                 <?php endif; ?>
                                             </td>
                                             <td><?= date('d M Y', strtotime($user['created_at'])) ?></td>

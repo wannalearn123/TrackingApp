@@ -80,7 +80,6 @@ class UserModel extends Model
     public function getTotalUsersCount()
     {
         return $this->where('role', 'user')
-                    ->where('is_active', 1)
                     ->countAllResults();
     }
 

@@ -69,7 +69,7 @@ $this->section('page_content');
     
     <!-- BMI Distribution & Alert Users -->
     <div class="row mb-4">
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header bg-white">
                     <h5 class="mb-0"><i class="fas fa-chart-pie me-2"></i> Distribusi BMI Users</h5>
@@ -190,20 +190,23 @@ $this->section('page_content');
 // BMI Distribution Chart
 const bmiData = <?= json_encode($bmi_stats ?? ['underweight' => 0, 'normal' => 0, 'overweight' => 0, 'obese' => 0]) ?>;
 
+console.log(bmiData)
+
+const labelKategori = bmiData.map(item => item.bmi_category); 
+const dataAngka = bmiData.map(item => Number(item.count));
+
+console.log(labelKategori)
+console.log(dataAngka)
+
 const ctx = document.getElementById('bmiChart').getContext('2d');
-new Chart(ctx, {
+const bmiChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Underweight', 'Normal', 'Overweight', 'Obese'],
+        labels: labelKategori,
         datasets: [{
-            data: [
-                bmiData.underweight,
-                bmiData.normal,
-                bmiData.overweight,
-                bmiData.obese
-            ],
+            data: dataAngka,
             backgroundColor: [
-                '#3b82f6',
+                // '#3b82f6',
                 '#10b981',
                 '#f59e0b',
                 '#ef4444'

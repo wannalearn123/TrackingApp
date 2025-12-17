@@ -35,7 +35,7 @@ $this->section('page_content');
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-route fa-2x text-success mb-2"></i>
-                    <h4 class="mb-0"><?= number_format($summary['total_distance'] ?? 0, 2) ?></h4>
+                    <h4 class="mb-0"><?= number_format($totalDistance ?? 0, 2) ?></h4>
                     <small class="text-muted">Total Jarak (km)</small>
                 </div>
             </div>
