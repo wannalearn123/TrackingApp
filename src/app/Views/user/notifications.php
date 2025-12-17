@@ -2,6 +2,7 @@
 // filepath: app/Views/user/notifications.php
 $this->extend('layouts/user_layout');
 $this->section('page_content');
+include_once APPPATH . 'Helpers/Time_helper.php';
 ?>
 
 <div class="container-fluid">

@@ -44,17 +44,8 @@ $this->section('page_content');
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-clock fa-2x text-info mb-2"></i>
-                    <h4 class="mb-0"><?= gmdate('H:i', $summary['total_duration'] ?? 0) ?></h4>
-                    <small class="text-muted">Total Durasi</small>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-body text-center">
-                    <i class="fas fa-fire fa-2x text-warning mb-2"></i>
-                    <h4 class="mb-0"><?= number_format($summary['total_calories'] ?? 0) ?></h4>
-                    <small class="text-muted">Total Kalori</small>
+                    <h4 class="mb-0"><?= $totalDuration ?? 0 ?></h4>
+                    <small class="text-muted">Total Durasi  (jam)</small>
                 </div>
             </div>
         </div>
@@ -160,7 +151,7 @@ $this->section('page_content');
                                             <i class="fas fa-tachometer-alt text-success"></i>
                                         </div>
                                         <div>
-                                            <div class="fw-bold"><?= number_format($activity['avg_speed'], 2) ?> km/h</div>
+                                            <div class="fw-bold"><?= number_format($activity['avg_pace'], 2) ?> km/h</div>
                                             <small class="text-muted">Kecepatan</small>
                                         </div>
                                     </div>
@@ -169,10 +160,6 @@ $this->section('page_content');
                                     <div class="d-flex align-items-center">
                                         <div class="bg-warning bg-opacity-10 rounded p-2 me-2">
                                             <i class="fas fa-fire text-warning"></i>
-                                        </div>
-                                        <div>
-                                            <div class="fw-bold"><?= number_format($activity['calories_burned']) ?> kcal</div>
-                                            <small class="text-muted">Kalori</small>
                                         </div>
                                     </div>
                                 </div>

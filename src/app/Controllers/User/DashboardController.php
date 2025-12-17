@@ -46,6 +46,8 @@ class DashboardController extends BaseController
         // Get unread notifications count
         $unreadNotifications = $this->notificationModel->getUnreadCount($userId);
 
+        $totalActivities = count($this->trainingActivityModel->getActivitiesByUser($userId));
+
         $data = [
             'physicalData'        => $physicalData,
             'totalDistance'       => $totalDistance,
@@ -53,6 +55,7 @@ class DashboardController extends BaseController
             'recentActivities'    => $recentActivities,
             'monthlyStats'        => $monthlyStats,
             'unreadNotifications' => $unreadNotifications,
+            'totalActivities'     => $totalActivities
         ];
 
         return view('user/dashboard', $data);

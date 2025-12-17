@@ -22,7 +22,7 @@ $this->section('page_content');
             <div class="stat-card primary">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= $stats['total_activities'] ?? 0 ?></h3>
+                        <h3 class="mb-0"><?= $totalActivities ?? 0 ?></h3>
                         <p class="mb-0">Total Training</p>
                     </div>
                     <i class="fas fa-running fa-3x opacity-50"></i>
@@ -34,7 +34,7 @@ $this->section('page_content');
             <div class="stat-card success">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= number_format($stats['total_distance'] ?? 0, 2) ?></h3>
+                        <h3 class="mb-0"><?= number_format($totalDistance ?? 0, 2) ?></h3>
                         <p class="mb-0">Total Jarak (km)</p>
                     </div>
                     <i class="fas fa-route fa-3x opacity-50"></i>
@@ -46,22 +46,10 @@ $this->section('page_content');
             <div class="stat-card warning">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?= gmdate('H:i', $stats['total_duration'] ?? 0) ?></h3>
-                        <p class="mb-0">Total Durasi</p>
+                        <h3 class="mb-0"><?=  $totalDuration ?? 0 ?></h3>
+                        <p class="mb-0">Total Durasi (jam)</p>
                     </div>
                     <i class="fas fa-clock fa-3x opacity-50"></i>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3">
-            <div class="stat-card danger">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h3 class="mb-0"><?= number_format($stats['total_calories'] ?? 0) ?></h3>
-                        <p class="mb-0">Total Kalori</p>
-                    </div>
-                    <i class="fas fa-fire fa-3x opacity-50"></i>
                 </div>
             </div>
         </div>
@@ -75,27 +63,23 @@ $this->section('page_content');
                     <h5 class="mb-0"><i class="fas fa-weight me-2"></i> Data Fisik Saya</h5>
                 </div>
                 <div class="card-body">
-                    <?php if (!empty($physical_data)): ?>
+                    <?php if (!empty($physicalData)): ?>
                         <div class="text-center mb-3">
-                            <h2 class="display-4 mb-0"><?= number_format($physical_data['bmi'], 1) ?></h2>
+                            <h2 class="display-4 mb-0"><?= number_format($physicalData['bmi'], 1) ?></h2>
                             <p class="text-muted mb-2">BMI</p>
                             <span class="badge bg-<?= $bmi_color ?? 'secondary' ?> fs-6">
-                                <?= $physical_data['bmi_category'] ?>
+                                <?= $physicalData['bmi_category'] ?>
                             </span>
                         </div>
                         <hr>
                         <table class="table table-sm table-borderless mb-0">
                             <tr>
                                 <td><i class="fas fa-ruler-vertical me-2"></i> Tinggi:</td>
-                                <td class="text-end"><strong><?= $physical_data['height'] ?> cm</strong></td>
+                                <td class="text-end"><strong><?= $physicalData['height'] ?> cm</strong></td>
                             </tr>
                             <tr>
                                 <td><i class="fas fa-weight me-2"></i> Berat:</td>
-                                <td class="text-end"><strong><?= $physical_data['weight'] ?> kg</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-birthday-cake me-2"></i> Umur:</td>
-                                <td class="text-end"><strong><?= $physical_data['age'] ?> tahun</strong></td>
+                                <td class="text-end"><strong><?= $physicalData['weight'] ?> kg</strong></td>
                             </tr>
                         </table>
                     <?php else: ?>
@@ -206,7 +190,7 @@ $this->section('page_content');
 <?php $this->section('scripts'); ?>
 <script>
 // Progress Chart
-const chartData = <?= json_encode($chart_data ?? ['labels' => [], 'distances' => [], 'calories' => []]) ?>;
+const chartData = <?= json_encode($monthlyStats ?? ['labels' => [], 'distances' => []]) ?>;
 
 const ctx = document.getElementById('progressChart').getContext('2d');
 new Chart(ctx, {
@@ -222,15 +206,6 @@ new Chart(ctx, {
                 tension: 0.4,
                 fill: true
             },
-            {
-                label: 'Kalori (kcal)',
-                data: chartData.calories,
-                borderColor: '#f59e0b',
-                backgroundColor: 'rgba(245, 158, 11, 0.2)',
-                tension: 0.4,
-                fill: true,
-                yAxisID: 'y1'
-            }
         ]
     },
     options: {
@@ -245,15 +220,10 @@ new Chart(ctx, {
                     text: 'Jarak (km)'
                 }
             },
-            y1: {
-                beginAtZero: true,
-                position: 'right',
+            x: {
                 title: {
                     display: true,
-                    text: 'Kalori (kcal)'
-                },
-                grid: {
-                    drawOnChartArea: false
+                    text: 'Tanggal'
                 }
             }
         }
