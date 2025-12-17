@@ -46,6 +46,7 @@ class PhysicalDataController extends BaseController
         return view('admin/users/physical_data_form', $data);
     }
 
+
     /**
      * Store physical data
      */
@@ -84,7 +85,7 @@ class PhysicalDataController extends BaseController
                 $this->session->get('user_id'),
                 'updated_physical_data',
                 $userId,
-                $data
+                $data,
             );
 
             // Send BMI alert if needed
@@ -132,14 +133,14 @@ class PhysicalDataController extends BaseController
             'bmi_category'         => $bmiCategory,
             'recorded_by_admin_id' => $this->session->get('user_id'),
         ];
-
+        
         if ($this->physicalDataModel->update($dataId, $data)) {
             // Log activity
             $this->activityLogModel->logAction(
                 $this->session->get('user_id'),
                 'updated_physical_data',
                 $physicalData['user_id'],
-                $data
+                $data,
             );
 
             // Send BMI alert if needed

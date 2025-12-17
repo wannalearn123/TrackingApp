@@ -35,7 +35,7 @@ $this->section('page_content');
                 <div class="card-body text-center">
                     <h3 class="mb-0"><?= number_format($physicalData['bmi'] ?? 0, 1) ?></h3>
                     <p class="text-muted mb-2">BMI</p>
-                    <span class="badge bg-<?= $bmi_color ?? 'secondary' ?>">
+                    <span class="badge bg-<?= 'primary' ?? 'secondary' ?>">
                         <?= $physicalData['bmi_category'] ?? 'N/A' ?>
                     </span>
                 </div>
@@ -111,7 +111,6 @@ $this->section('page_content');
                             <th>Jarak</th>
                             <th>Durasi</th>
                             <th>Kecepatan</th>
-                            <th>Kalori</th>
                             <th>Map</th>
                         </tr>
                     </thead>
@@ -175,7 +174,7 @@ $this->section('page_content');
 <?php $this->section('scripts'); ?>
 <script>
 // Progress Chart
-const progressData = <?= json_encode($chart_data ?? ['labels' => [], 'distances' => [], 'calories' => []]) ?>;
+const progressData = <?= json_encode($chart_data ?? ['labels' => [], 'distances' => []]) ?>;
 
 const ctx = document.getElementById('progressChart').getContext('2d');
 new Chart(ctx, {
@@ -190,14 +189,6 @@ new Chart(ctx, {
                 backgroundColor: 'rgba(102, 126, 234, 0.1)',
                 tension: 0.4
             },
-            {
-                label: 'Kalori',
-                data: progressData.calories,
-                borderColor: '#f59e0b',
-                backgroundColor: 'rgba(245, 158, 11, 0.1)',
-                tension: 0.4,
-                yAxisID: 'y1'
-            }
         ]
     },
     options: {
@@ -207,12 +198,12 @@ new Chart(ctx, {
                 beginAtZero: true,
                 position: 'left'
             },
-            y1: {
-                beginAtZero: true,
-                position: 'right',
-                grid: {
-                    drawOnChartArea: false
-                }
+            x: {
+                title: {
+                    display: true,
+                    text: 'Tanggal'
+                },
+                position: 'bottom'
             }
         }
     }

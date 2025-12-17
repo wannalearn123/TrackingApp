@@ -30,7 +30,7 @@ class DashboardController extends BaseController
             'total_users'       => $this->userModel->getTotalUsersCount(),
             'pending_users'     => count($this->userModel->getPendingUsers()),
             'approved_users'    => $this->userModel->getApprovedUsersCount(),
-            'active_users'      => $this->trainingActivityModel->getActiveUsersToday(),
+            'active_users'      => $this->userModel->getActiveUsersCount(),
             'completion_rate'   => $this->trainingActivityModel->getWeeklyCompletionRate(),
             'bmi_stats'         => $this->physicalDataModel->getBMIStatistics(),
             'recent_activities' => $this->trainingActivityModel->getAllActivitiesWithUsers(10),

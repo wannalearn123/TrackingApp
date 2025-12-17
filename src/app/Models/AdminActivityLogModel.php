@@ -23,6 +23,8 @@ class AdminActivityLogModel extends Model
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
+    protected $updatedField  = '';
+    protected $deletedField  = '';
 
     // Validation
     protected $validationRules = [
@@ -35,7 +37,7 @@ class AdminActivityLogModel extends Model
     /**
      * Log admin action
      */
-    public function logAction($adminId, $action, $targetUserId = null, $details = null)
+    public function logAction($adminId, $action, $targetUserId = null, $details = null,)
     {
         $data = [
             'admin_id'       => $adminId,

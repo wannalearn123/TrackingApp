@@ -30,7 +30,7 @@ $this->section('page_content');
                     <h5 class="mb-0"><i class="fas fa-clipboard-list me-2"></i> Form Data Fisik</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= isset($physical_data) ? base_url('admin/physical-data/update/' . $physical_data['id']) : base_url('admin/physical-data/store') ?>">
+                    <form method="POST" action="<?= isset($physicalData) ? base_url('admin/physical-data/update/' . $physicalData['id']) : base_url('admin/physical-data/store') ?>">
                         <?= csrf_field() ?>
                         <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
                         
@@ -42,13 +42,14 @@ $this->section('page_content');
                                 <input type="number" step="0.1" 
                                        class="form-control <?= isset($errors['height']) ? 'is-invalid' : '' ?>" 
                                        id="height" name="height" 
-                                       value="<?= old('height', $physical_data['height'] ?? '') ?>" 
+                                       value="<?= old('height', $physicalData['height'] ?? '') ?>" 
                                        placeholder="Contoh: 170" required>
                                 <?php if (isset($errors['height'])): ?>
                                     <div class="invalid-feedback"><?= $errors['height'] ?></div>
                                 <?php endif; ?>
                             </div>
-                            
+                        </div>
+                        <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="weight" class="form-label">
                                     <i class="fas fa-weight me-1"></i> Berat Badan (kg)
@@ -56,63 +57,18 @@ $this->section('page_content');
                                 <input type="number" step="0.1" 
                                        class="form-control <?= isset($errors['weight']) ? 'is-invalid' : '' ?>" 
                                        id="weight" name="weight" 
-                                       value="<?= old('weight', $physical_data['weight'] ?? '') ?>" 
+                                       value="<?= old('weight', $physicalData['weight'] ?? '') ?>" 
                                        placeholder="Contoh: 65" required>
                                 <?php if (isset($errors['weight'])): ?>
                                     <div class="invalid-feedback"><?= $errors['weight'] ?></div>
                                 <?php endif; ?>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="age" class="form-label">
-                                    <i class="fas fa-birthday-cake me-1"></i> Umur (tahun)
-                                </label>
-                                <input type="number" 
-                                       class="form-control <?= isset($errors['age']) ? 'is-invalid' : '' ?>" 
-                                       id="age" name="age" 
-                                       value="<?= old('age', $physical_data['age'] ?? '') ?>" 
-                                       placeholder="Contoh: 25" required>
-                                <?php if (isset($errors['age'])): ?>
-                                    <div class="invalid-feedback"><?= $errors['age'] ?></div>
-                                <?php endif; ?>
-                            </div>
-                            
-                            <div class="col-md-6 mb-3">
-                                <label for="gender" class="form-label">
-                                    <i class="fas fa-venus-mars me-1"></i> Jenis Kelamin
-                                </label>
-                                <select class="form-select <?= isset($errors['gender']) ? 'is-invalid' : '' ?>" 
-                                        id="gender" name="gender" required>
-                                    <option value="">Pilih Jenis Kelamin</option>
-                                    <option value="male" <?= old('gender', $physical_data['gender'] ?? '') == 'male' ? 'selected' : '' ?>>
-                                        Laki-laki
-                                    </option>
-                                    <option value="female" <?= old('gender', $physical_data['gender'] ?? '') == 'female' ? 'selected' : '' ?>>
-                                        Perempuan
-                                    </option>
-                                </select>
-                                <?php if (isset($errors['gender'])): ?>
-                                    <div class="invalid-feedback"><?= $errors['gender'] ?></div>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="medical_conditions" class="form-label">
-                                <i class="fas fa-notes-medical me-1"></i> Kondisi Medis (Opsional)
-                            </label>
-                            <textarea class="form-control" id="medical_conditions" 
-                                      name="medical_conditions" rows="3" 
-                                      placeholder="Contoh: Asma, Diabetes, atau kosongkan jika tidak ada"><?= old('medical_conditions', $physical_data['medical_conditions'] ?? '') ?></textarea>
-                            <small class="text-muted">Informasi ini penting untuk menyesuaikan target training</small>
+                            </div>                         
                         </div>
                         
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-save me-2"></i> 
-                                <?= isset($physical_data) ? 'Update' : 'Simpan' ?> Data
+                                <?= isset($physicalData) ? 'Update' : 'Simpan' ?> Data
                             </button>
                             <a href="<?= base_url('admin/users') ?>" class="btn btn-secondary">
                                 <i class="fas fa-arrow-left me-2"></i> Kembali
