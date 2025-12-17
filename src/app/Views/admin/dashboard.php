@@ -144,6 +144,22 @@ $this->section('page_content');
                                     </td>
                                     <td>
                                         <span class="badge bg-info">
+                                            <?php
+
+                                            if (!function_exists('format_duration')) {
+                                                function format_duration($seconds) {
+                                                    $hours = floor($seconds / 3600);
+                                                    $minutes = floor(($seconds % 3600) / 60);
+                                                    $secs = $seconds % 60;
+                                                    
+                                                    if ($hours > 0) {
+                                                        return sprintf('%d jam %d menit', $hours, $minutes);
+                                                    }
+                                                    
+                                                    return sprintf('%d menit %d detik', $minutes, $secs);
+                                                }
+                                            }
+                                            ?>
                                             <?= format_duration($activity['duration']) ?>
                                         </span>
                                     </td>
