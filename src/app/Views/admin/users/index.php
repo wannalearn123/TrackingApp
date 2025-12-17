@@ -64,7 +64,7 @@ $this->section('page_content');
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <?php if (!empty($user['has_physical_data'])): ?>
+                                                <?php if (!empty($user['bmi'])): ?>
                                                     <span class="badge bg-info">
                                                         <i class="fas fa-check"></i> Sudah Input
                                                     </span>

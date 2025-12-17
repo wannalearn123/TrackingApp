@@ -33,10 +33,10 @@ $this->section('page_content');
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body text-center">
-                    <h3 class="mb-0"><?= number_format($physical_data['bmi'] ?? 0, 1) ?></h3>
+                    <h3 class="mb-0"><?= number_format($physicalData['bmi'] ?? 0, 1) ?></h3>
                     <p class="text-muted mb-2">BMI</p>
                     <span class="badge bg-<?= $bmi_color ?? 'secondary' ?>">
-                        <?= $physical_data['bmi_category'] ?? 'N/A' ?>
+                        <?= $physicalData['bmi_category'] ?? 'N/A' ?>
                     </span>
                 </div>
             </div>
@@ -52,16 +52,8 @@ $this->section('page_content');
         <div class="col-md-3">
             <div class="card">
                 <div class="card-body text-center">
-                    <h3 class="mb-0"><?= number_format($stats['total_distance'] ?? 0, 2) ?></h3>
+                    <h3 class="mb-0"><?= number_format($totalDistance ?? 0, 2) ?></h3>
                     <p class="text-muted mb-0">Total Jarak (km)</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h3 class="mb-0"><?= number_format($stats['total_calories'] ?? 0) ?></h3>
-                    <p class="text-muted mb-0">Total Kalori</p>
                 </div>
             </div>
         </div>
@@ -75,30 +67,16 @@ $this->section('page_content');
                     <h5 class="mb-0"><i class="fas fa-weight me-2"></i> Data Fisik</h5>
                 </div>
                 <div class="card-body">
-                    <?php if (!empty($physical_data)): ?>
+                    <?php if (!empty($physicalData)): ?>
                         <table class="table table-borderless">
                             <tr>
                                 <td><strong>Tinggi Badan:</strong></td>
-                                <td><?= $physical_data['height'] ?> cm</td>
+                                <td><?= $physicalData['height'] ?> cm</td>
                             </tr>
                             <tr>
                                 <td><strong>Berat Badan:</strong></td>
-                                <td><?= $physical_data['weight'] ?> kg</td>
+                                <td><?= $physicalData['weight'] ?> kg</td>
                             </tr>
-                            <tr>
-                                <td><strong>Umur:</strong></td>
-                                <td><?= $physical_data['age'] ?> tahun</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Jenis Kelamin:</strong></td>
-                                <td><?= $physical_data['gender'] == 'male' ? 'Laki-laki' : 'Perempuan' ?></td>
-                            </tr>
-                            <?php if (!empty($physical_data['medical_conditions'])): ?>
-                                <tr>
-                                    <td><strong>Kondisi Medis:</strong></td>
-                                    <td><?= esc($physical_data['medical_conditions']) ?></td>
-                                </tr>
-                            <?php endif; ?>
                         </table>
                     <?php else: ?>
                         <p class="text-center text-muted">Data fisik belum diinput</p>
