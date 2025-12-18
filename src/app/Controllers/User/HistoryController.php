@@ -43,6 +43,7 @@ class HistoryController extends BaseController
             'totalDuration' => $totalDuration,
             'monthlyStats'  => $monthlyStats,
             'physicalData'  => $physicalData,
+            'filters'        => $this->request->getGet('filter') ?? 'all',
         ];
 
         return view('user/history', $data);

@@ -14,6 +14,6 @@ class LogoutController extends BaseController
         // Destroy session
         $this->session->destroy();
 
-        return redirect()->to('/login')->with('success', 'Anda telah berhasil logout');
+        return redirect()->to('/')->with('success', 'Anda telah berhasil logout');
     }
 }

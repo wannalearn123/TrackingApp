@@ -46,7 +46,7 @@ $this->section('page_content');
             <div class="stat-card warning">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
-                        <h3 class="mb-0"><?=  $totalDuration ?? 0 ?></h3>
+                        <h3 class="mb-0"><?=  date('H:i:s', $totalDuration ?? 0) ?></h3>
                         <p class="mb-0">Total Durasi (jam)</p>
                     </div>
                     <i class="fas fa-clock fa-3x opacity-50"></i>
