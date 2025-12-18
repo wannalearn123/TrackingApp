@@ -4,14 +4,17 @@ namespace App\Controllers\User;
 
 use App\Controllers\BaseController;
 use App\Models\TrainingActivityModel;
+use App\Models\PhysicalDataModel;
 
 class TrainingController extends BaseController
 {
     protected $trainingActivityModel;
+    protected $PhysicalDataModel;
 
     public function __construct()
     {
         $this->trainingActivityModel = new TrainingActivityModel();
+        $this->PhysicalDataModel = new PhysicalDataModel();
     }
 
     /**
@@ -19,7 +22,8 @@ class TrainingController extends BaseController
      */
     public function start()
     {
-        return view('user/training/start');
+        $physicalData = $this->PhysicalDataModel->getLatestByUserId($this->session->get('user_id'));
+        return view('user/training/start', ['physicalData' => $physicalData]);
     }
 
     /**
@@ -73,13 +77,13 @@ class TrainingController extends BaseController
     public function summary($activityId)
     {
         $activity = $this->trainingActivityModel->find($activityId);
-
         if (!$activity || $activity['user_id'] != $this->session->get('user_id')) {
             return redirect()->to('/user/dashboard')->with('error', 'Aktivitas tidak ditemukan');
         }
 
         $data = [
             'activity' => $activity,
+
         ];
 
         return view('user/training/summary', $data);

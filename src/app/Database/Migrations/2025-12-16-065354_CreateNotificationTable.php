@@ -22,7 +22,7 @@ class CreateNotificationsTable extends Migration
             ],
             'type' => [
                 'type'       => 'ENUM',
-                'constraint' => ['inactive_7days', 'bmi_alert'],
+                'constraint' => ['inactive_7days', 'bmi_alert', 'welcome'],
             ],
             'title' => [
                 'type'       => 'VARCHAR',

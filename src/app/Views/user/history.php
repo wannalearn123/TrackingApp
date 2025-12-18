@@ -44,8 +44,8 @@ $this->section('page_content');
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-clock fa-2x text-info mb-2"></i>
-                    <h4 class="mb-0"><?= $totalDuration ?? 0 ?></h4>
-                    <small class="text-muted">Total Durasi  (jam)</small>
+                    <h4 class="mb-0"><?= date('H:i:s', $totalDuration ?? 0) ?></h4>
+                    <small class="text-muted">Total Durasi</small>
                 </div>
             </div>
         </div>

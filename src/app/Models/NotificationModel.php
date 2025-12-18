@@ -39,6 +39,23 @@ class NotificationModel extends Model
     protected $skipValidation = false;
 
     /**
+     * Create welcome notification
+     */
+    public function createWelcomeNotification($userId)
+    {
+        $data = [
+            'user_id' => $userId,
+            'type'    => 'welcome',
+            'title'   => 'Selamat Datang di Aplikasi Tracking Latihan!',
+            'message' => 'Terima kasih telah bergabung. Mulailah mencatat latihan Anda untuk mencapai tujuan kebugaran Anda.',
+            'is_read' => 0,
+            'sent_at' => date('Y-m-d H:i:s'),
+        ];
+        
+        return $this->insert($data);
+    }
+
+    /**
      * Create notification for inactive user
      */
     public function createInactiveNotification($userId)

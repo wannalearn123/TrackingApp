@@ -67,7 +67,7 @@ $this->section('page_content');
                         <div class="text-center mb-3">
                             <h2 class="display-4 mb-0"><?= number_format($physicalData['bmi'], 1) ?></h2>
                             <p class="text-muted mb-2">BMI</p>
-                            <span class="badge bg-<?= $bmi_color ?? 'secondary' ?> fs-6">
+                            <span class="badge bg-<?= 'primary' ?? 'secondary' ?> fs-6">
                                 <?= $physicalData['bmi_category'] ?>
                             </span>
                         </div>

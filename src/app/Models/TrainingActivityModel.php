@@ -98,7 +98,7 @@ class TrainingActivityModel extends Model
                        ->where('user_id', $userId)
                        ->first();
         
-        return round(($result['duration'] ?? 0) / 3600, 2); // Convert to hours
+        return round(($result['duration'] ?? 0), 2); // Convert to hours
     }
 
     /**

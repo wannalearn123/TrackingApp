@@ -15,7 +15,7 @@ $this->section('page_content');
         </p>
     </div>
     
-    <?php if (empty($physical_data)): ?>
+    <?php if (empty($physicalData)): ?>
         <div class="alert alert-warning">
             <i class="fas fa-exclamation-triangle me-2"></i>
             <strong>Data fisik belum diinput!</strong> Hubungi admin untuk input data fisik agar tracking lebih akurat.

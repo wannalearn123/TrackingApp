@@ -69,7 +69,7 @@ $this->section('page_content');
     
     <!-- BMI Distribution & Alert Users -->
     <div class="row mb-4">
-        <div class="col-md-7">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header bg-white">
                     <h5 class="mb-0"><i class="fas fa-chart-pie me-2"></i> Distribusi BMI Users</h5>
@@ -194,6 +194,7 @@ console.log(bmiData)
 
 const labelKategori = bmiData.map(item => item.bmi_category); 
 const dataAngka = bmiData.map(item => Number(item.count));
+const bmiCategories = 
 
 console.log(labelKategori)
 console.log(dataAngka)
