@@ -38,9 +38,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--light-color);
         }
-        
+
         .gradient-bg {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);
         }
         
         .card {
@@ -101,7 +101,7 @@
         
         .sidebar .nav-link:hover,
         .sidebar .nav-link.active {
-            background: var(--primary-color);
+            background: var(--bs-primary);  );
             color: white;
         }
         

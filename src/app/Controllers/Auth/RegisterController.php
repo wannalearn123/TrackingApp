@@ -4,14 +4,17 @@ namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
 use App\Models\UserModel;
+use App\Libraries\NotificationService;
 
 class RegisterController extends BaseController
 {
     protected $userModel;
+    protected $notificationService;
 
     public function __construct()
     {
         $this->userModel = new UserModel();
+        $this->notificationService = new NotificationService();
     }
 
     /**
@@ -75,6 +78,7 @@ class RegisterController extends BaseController
         ];
 
         if ($this->userModel->insert($data)) {
+            $this->notificationService->sendWelcomeNotification($this->userModel->getInsertID());
             return redirect()->to('/waiting-approval')->with('success', 'Registrasi berhasil! Menunggu persetujuan admin');
         } else {
             return redirect()->back()->withInput()->with('error', 'Registrasi gagal. Silakan coba lagi');
