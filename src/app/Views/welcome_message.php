@@ -3,7 +3,7 @@ $this->extend('layouts/main');
 $this->section('content');
 ?>
 
-<div class="min-vh-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);">
+<div class="min-vh-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">

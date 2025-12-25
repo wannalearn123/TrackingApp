@@ -25,14 +25,13 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #FC4C02;
-            --secondary-color: #FF8C42;
-            --success-color: #22C55E;
-            --danger-color: #EF4444;
-            --warning-color: #F59E0B;
-            --info-color: #3B82F6;
-            --dark-color: #0F172A;
-            --light-color: #F8FAFC;
+            --bs-primary: #FC4C02;
+            --bs-info: #FF8C42;
+            --bs-success: #22C55E;
+            --bs-danger: #EF4444;
+            --bs-warning: #F59E0B;
+            --bs-dark: #0F172A;
+            --bs-light: #F8FAFC;
         }
         
         body {
@@ -57,22 +56,27 @@
         }
         
         .btn-primary {
-            background: var(--primary-color);
-            border: none;
+            --bs-btn-color: #ffffff;
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: none;
+            --bs-btn-hover-bg: var(--bs-primary);
+            --bs-btn-hover-color: #ffffff;
+            --bs-btn-active-bg: var(--bs-info);
+            --bs-btn-active-border-color: var(--bs-primary);
         }
         
         .btn-outline-primary {
-            --bs-btn-color: var(--primary-color);
-            --bs-btn-border-color: var(--primary-color);
-            --bs-btn-hover-bg: var(--primary-color);
+            --bs-btn-color: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-btn-hover-bg: var(--bs-info);
             --bs-btn-hover-color: #ffffff;
-            --bs-btn-hover-border-color: var(--primary-color);
-            --bs-btn-active-bg: var(--primary-color);
-            --bs-btn-active-border-color: var(--primary-color);
+            --bs-btn-hover-border-color: var(--bs-primary);
+            --bs-btn-active-bg: var(--bs-info);
+            --bs-btn-active-border-color: var(--bs-primary);
         }
 
         .btn-primary:hover {
-            background: var(--secondary-color);
+            background: var(--bs-info);
         }
         
         .sidebar {
@@ -114,10 +118,10 @@
             margin-bottom: 20px;
         } 
         
-        .stat-card.primary { background: var(--primary-color) }
-        .stat-card.success { background: var(--success-color) }
-        .stat-card.warning { background: var(--warning-color) }
-        .stat-card.danger { background: var(--danger-colors) }
+        .stat-card.primary { background: var(--bs-primary) }
+        .stat-card.success { background: var(--bs-success) }
+        .stat-card.warning { background: var(--bs-warning) }
+        .stat-card.danger { background: var(--bs-danger) }
         
         @media (max-width: 768px) {
             .sidebar {
