@@ -13,122 +13,122 @@ class ComposerStaticInitf82e03a3aec4412162a4b054b7670ee5
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' =>
+        'T' => 
         array (
             'Tests\\Support\\' => 14,
         ),
-        'S' =>
+        'S' => 
         array (
             'Svg\\' => 4,
             'Sabberworm\\CSS\\' => 15,
         ),
-        'P' =>
+        'P' => 
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
         ),
-        'M' =>
+        'M' => 
         array (
             'Masterminds\\' => 12,
         ),
-        'L' =>
+        'L' => 
         array (
             'Laminas\\Escaper\\' => 16,
         ),
-        'F' =>
+        'F' => 
         array (
             'FontLib\\' => 8,
             'Faker\\' => 6,
         ),
-        'D' =>
+        'D' => 
         array (
             'Dompdf\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
         ),
-        'C' =>
+        'C' => 
         array (
             'Config\\' => 7,
             'CodeIgniter\\' => 12,
         ),
-        'A' =>
+        'A' => 
         array (
             'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Tests\\Support\\' =>
+        'Tests\\Support\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests/_support',
         ),
-        'Svg\\' =>
+        'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/php-svg-lib/src/Svg',
         ),
-        'Sabberworm\\CSS\\' =>
+        'Sabberworm\\CSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
-        'Psr\\Log\\' =>
+        'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'Psr\\Container\\' =>
+        'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'PhpParser\\' =>
+        'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
-        'Masterminds\\' =>
+        'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Laminas\\Escaper\\' =>
+        'Laminas\\Escaper\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
         ),
-        'FontLib\\' =>
+        'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/php-font-lib/src/FontLib',
         ),
-        'Faker\\' =>
+        'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
         ),
-        'Dompdf\\' =>
+        'Dompdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
-        'Doctrine\\Instantiator\\' =>
+        'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
-        'DeepCopy\\' =>
+        'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
-        'Config\\' =>
+        'Config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/Config',
         ),
-        'CodeIgniter\\' =>
+        'CodeIgniter\\' => 
         array (
             0 => __DIR__ . '/..' . '/codeigniter4/framework/system',
         ),
-        'App\\' =>
+        'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'o' =>
+        'o' => 
         array (
-            'org\\bovigo\\vfs\\' =>
+            'org\\bovigo\\vfs\\' => 
             array (
                 0 => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php',
             ),
@@ -138,6 +138,7 @@ class ComposerStaticInitf82e03a3aec4412162a4b054b7670ee5
     public static $classMap = array (
         'App\\Commands\\CheckInactiveUsersCommand' => __DIR__ . '/../..' . '/app/Commands/CheckInactiveUsersCommand.php',
         'App\\Commands\\TestRoutesCommand' => __DIR__ . '/../..' . '/app/Commands/TestRoutesCommand.php',
+        'App\\Commands\\TestRoutingCommand' => __DIR__ . '/../..' . '/app/Commands/TestRoutingCommand.php',
         'App\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/Admin/DashboardController.php',
         'App\\Controllers\\Admin\\MonitoringController' => __DIR__ . '/../..' . '/app/Controllers/Admin/MonitoringController.php',
         'App\\Controllers\\Admin\\PhysicalDataController' => __DIR__ . '/../..' . '/app/Controllers/Admin/PhysicalDataController.php',
@@ -148,11 +149,17 @@ class ComposerStaticInitf82e03a3aec4412162a4b054b7670ee5
         'App\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Controllers/Auth/RegisterController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
         'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Controllers\\Test' => __DIR__ . '/../..' . '/app/Controllers/Test.php',
         'App\\Controllers\\User\\DashboardController' => __DIR__ . '/../..' . '/app/Controllers/User/DashboardController.php',
         'App\\Controllers\\User\\HistoryController' => __DIR__ . '/../..' . '/app/Controllers/User/HistoryController.php',
         'App\\Controllers\\User\\NotificationController' => __DIR__ . '/../..' . '/app/Controllers/User/NotificationController.php',
         'App\\Controllers\\User\\TrainingController' => __DIR__ . '/../..' . '/app/Controllers/User/TrainingController.php',
         'App\\Database\\Seeds\\AdminSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/AdminSeeder.php',
+        'App\\Database\\Seeds\\DatabaseSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/DatabaseSeeder.php',
+        'App\\Database\\Seeds\\NotificationSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/NotificationSeeder.php',
+        'App\\Database\\Seeds\\PhysicalDataSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/PhysicalDataSeeder.php',
+        'App\\Database\\Seeds\\TrainingActivitySeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/TrainingActivitySeeder.php',
+        'App\\Database\\Seeds\\UserSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/UserSeeder.php',
         'App\\Filters\\AdminFilter' => __DIR__ . '/../..' . '/app/Filters/AdminFilter.php',
         'App\\Filters\\AuthFilter' => __DIR__ . '/../..' . '/app/Filters/AuthFilter.php',
         'App\\Filters\\UserFilter' => __DIR__ . '/../..' . '/app/Filters/UserFilter.php',

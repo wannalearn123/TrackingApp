@@ -20,7 +20,7 @@ $this->section('content');
                     </div>
                     <div class="card-body p-5 text-center">
                         <div class="mb-4">
-                            <i class="fas fa-running fa-5x text-primary mb-3"></i>
+                            <i class="fas fa-running fa-5x mb-3"></i>
                             <h1 class="display-4 fw-bold mb-3">Welcome to Training Tracking App</h1>
                             <p class="lead text-muted mb-4">
                                 Your Personal Fitness Journey Companion
@@ -28,7 +28,7 @@ $this->section('content');
                         </div>
 
                         <!-- App Description -->
-                        <div class="text-start mb-4">
+                        <div class="text-center mb-4">
                             <h3 class="mb-3"><i class="fas fa-info-circle text-info me-2"></i>About This Application</h3>
                             <p class="text-muted">
                                 The Training Tracking App is a comprehensive fitness monitoring platform designed to help you track, 

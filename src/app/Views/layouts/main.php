@@ -25,14 +25,14 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --warning-color: #f59e0b;
-            --info-color: #3b82f6;
-            --dark-color: #1f2937;
-            --light-color: #f9fafb;
+            --primary-color: #FC4C02;
+            --secondary-color: #FF8C42;
+            --success-color: #22C55E;
+            --danger-color: #EF4444;
+            --warning-color: #F59E0B;
+            --info-color: #3B82F6;
+            --dark-color: #0F172A;
+            --light-color: #F8FAFC;
         }
         
         body {
@@ -61,6 +61,16 @@
             border: none;
         }
         
+        .btn-outline-primary {
+            --bs-btn-color: var(--primary-color);
+            --bs-btn-border-color: var(--primary-color);
+            --bs-btn-hover-bg: var(--primary-color);
+            --bs-btn-hover-color: #ffffff;
+            --bs-btn-hover-border-color: var(--primary-color);
+            --bs-btn-active-bg: var(--primary-color);
+            --bs-btn-active-border-color: var(--primary-color);
+        }
+
         .btn-primary:hover {
             background: var(--secondary-color);
         }
@@ -102,12 +112,12 @@
             border-radius: 10px;
             color: white;
             margin-bottom: 20px;
-        }
+        } 
         
-        .stat-card.primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .stat-card.success { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
-        .stat-card.warning { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-        .stat-card.danger { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+        .stat-card.primary { background: var(--primary-color) }
+        .stat-card.success { background: var(--success-color) }
+        .stat-card.warning { background: var(--warning-color) }
+        .stat-card.danger { background: var(--danger-colors) }
         
         @media (max-width: 768px) {
             .sidebar {
