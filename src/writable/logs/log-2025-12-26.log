@@ -300,3 +300,689 @@ DEBUG - 2025-12-26 15:13:33 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-12-26 15:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-26 15:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-12-26 15:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:26:59 --> ErrorException: Undefined property: App\Controllers\Admin\MonitoringController::$activityModel
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Controllers/Admin/MonitoringController.php on line 39.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:27:26 --> ErrorException: Undefined property: App\Controllers\Admin\MonitoringController::$atrainingActivityModel
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Controllers/Admin/MonitoringController.php on line 39.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:27:32 --> mysqli_sql_exception: Unknown column 'activities.user_id' in 'ON' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(1250): CodeIgniter\Model->countAllResults()
+#6 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(56): CodeIgniter\BaseModel->paginate()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2025-12-26 15:27:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'activities.user_id' in 'ON'
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(1250): CodeIgniter\Model->countAllResults()
+ 4 APPPATH/Controllers/Admin/MonitoringController.php(56): CodeIgniter\BaseModel->paginate()
+ 5 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:27:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'activities.user_id' in 'ON'
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(1250): CodeIgniter\Model->countAllResults()
+ 6 APPPATH/Controllers/Admin/MonitoringController.php(56): CodeIgniter\BaseModel->paginate()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:27:32 --> [Caused by] mysqli_sql_exception: Unknown column 'activities.user_id' in 'ON'
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(1250): CodeIgniter\Model->countAllResults()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(56): CodeIgniter\BaseModel->paginate()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:29:34 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TrainingActivityModel::getActivityWithUser
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Model.php on line 927.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(39): CodeIgniter\Model->__call()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:35:51 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:35:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:35:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:35:51 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:36:04 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:36:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:36:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:36:04 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:37:09 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:37:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:09 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:37:41 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:37:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:41 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:37:46 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:37:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:46 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:37:58 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:37:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:37:58 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-26 15:38:04 --> mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '=' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+#6 /home/anur123/Documents/TrackingApp/src/app/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+#7 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-12-26 15:38:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:38:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+CRITICAL - 2025-12-26 15:38:04 --> [Caused by] mysqli_sql_exception: Illegal parameter data types bigint unsigned and row for operation '='
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 VENDORPATH/codeigniter4/framework/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/BaseModel.php(677): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/TrainingActivityModel.php(154): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Admin/MonitoringController.php(34): App\Models\TrainingActivityModel->getActivitiesByUser()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:39:01 --> ErrorException: Undefined variable $filters
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Controllers/Admin/MonitoringController.php on line 34.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:39:35 --> ErrorException: Undefined variable $userId
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Controllers/Admin/MonitoringController.php on line 34.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:47:40 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TrainingActivityModel::getAllActivitiesByUser
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH/codeigniter4/framework/system/Model.php on line 927.
+ 1 APPPATH/Controllers/Admin/MonitoringController.php(34): CodeIgniter\Model->__call()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 15:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 15:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 15:59:02 --> Error: Call to a member function groupStart() on array
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Controllers/Admin/MonitoringController.php on line 37.
+ 1 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 2 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 16:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 16:01:54 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Views/admin/monitoring/activities_list.php on line 70.
+ 1 APPPATH/Views/admin/monitoring/activities_list.php(70): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/View/View.php(226): include('/home/anur123/Documents/TrackingApp/src/app/Views/admin/monitoring/activities_list.php')
+ 3 VENDORPATH/codeigniter4/framework/system/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(58): view()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 16:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 16:04:04 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Views/admin/monitoring/activities_list.php on line 70.
+ 1 APPPATH/Views/admin/monitoring/activities_list.php(70): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/View/View.php(226): include('/home/anur123/Documents/TrackingApp/src/app/Views/admin/monitoring/activities_list.php')
+ 3 VENDORPATH/codeigniter4/framework/system/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(58): view()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 16:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-26 16:07:57 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/monitoring]
+in APPPATH/Views/admin/monitoring/activities_list.php on line 70.
+ 1 APPPATH/Views/admin/monitoring/activities_list.php(70): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH/codeigniter4/framework/system/View/View.php(226): include('/home/anur123/Documents/TrackingApp/src/app/Views/admin/monitoring/activities_list.php')
+ 3 VENDORPATH/codeigniter4/framework/system/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Admin/MonitoringController.php(58): view()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-26 16:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 16:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 16:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-26 16:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
