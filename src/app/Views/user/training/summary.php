@@ -43,7 +43,7 @@ $this->section('page_content');
     
     <!-- Main Stats -->
     <div class="row mb-4">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="fas fa-route fa-3x text-primary mb-3"></i>
@@ -53,7 +53,7 @@ $this->section('page_content');
             </div>
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="fas fa-clock fa-3x text-info mb-3"></i>
@@ -63,22 +63,12 @@ $this->section('page_content');
             </div>
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
                     <i class="fas fa-tachometer-alt fa-3x text-success mb-3"></i>
-                    <h2 class="display-5 mb-0"><?= number_format($activity['avg_speed'], 2) ?></h2>
+                    <h2 class="display-5 mb-0"><?= number_format($activity['avg_pace'], 2) ?></h2>
                     <p class="text-muted mb-0">Kecepatan (km/h)</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <i class="fas fa-fire fa-3x text-warning mb-3"></i>
-                    <h2 class="display-5 mb-0"><?= number_format($activity['calories_burned']) ?></h2>
-                    <p class="text-muted mb-0">Kalori (kcal)</p>
                 </div>
             </div>
         </div>
@@ -106,7 +96,7 @@ $this->section('page_content');
                 <div class="card-body">
                     <?php
                     $pace = $activity['distance'] > 0 ? ($activity['duration'] / 60) / $activity['distance'] : 0;
-                    $maxSpeed = $activity['avg_speed'] * 1.2; // Estimate
+                    $maxSpeed = $activity['avg_pace'] * 1.2; // Estimate
                     ?>
                     
                     <div class="mb-3">
@@ -132,11 +122,11 @@ $this->section('page_content');
                     <div class="mb-0">
                         <div class="d-flex justify-content-between mb-2">
                             <span>Efficiency</span>
-                            <strong><?= $activity['avg_speed'] > 8 ? 'Excellent' : ($activity['avg_speed'] > 6 ? 'Good' : 'Fair') ?></strong>
+                            <strong><?= $activity['avg_pace'] > 8 ? 'Excellent' : ($activity['avg_pace'] > 6 ? 'Good' : 'Fair') ?></strong>
                         </div>
                         <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-<?= $activity['avg_speed'] > 8 ? 'success' : ($activity['avg_speed'] > 6 ? 'warning' : 'danger') ?>" 
-                                 style="width: <?= min($activity['avg_speed'] * 10, 100) ?>%"></div>
+                            <div class="progress-bar bg-<?= $activity['avg_pace'] > 8 ? 'success' : ($activity['avg_pace'] > 6 ? 'warning' : 'danger') ?>" 
+                                 style="width: <?= min($activity['avg_pace'] * 10, 100) ?>%"></div>
                         </div>
                     </div>
                 </div>
@@ -155,21 +145,14 @@ $this->section('page_content');
                         </div>
                     <?php endif; ?>
                     
-                    <?php if ($activity['avg_speed'] >= 10): ?>
+                    <?php if ($activity['avg_pace'] >= 10): ?>
                         <div class="alert alert-success mb-2">
                             <i class="fas fa-bolt me-2"></i>
                             <strong>Speed Demon!</strong>
                         </div>
                     <?php endif; ?>
-                    
-                    <?php if ($activity['calories_burned'] >= 500): ?>
-                        <div class="alert alert-danger mb-2">
-                            <i class="fas fa-fire me-2"></i>
-                            <strong>Calorie Burner!</strong>
-                        </div>
-                    <?php endif; ?>
-                    
-                    <?php if (empty($activity['distance'] >= 5) && empty($activity['avg_speed'] >= 10) && empty($activity['calories_burned'] >= 500)): ?>
+
+                    <?php if (empty($activity['distance'] >= 5) && empty($activity['avg_pace'] >= 10)): ?>
                         <p class="text-muted text-center mb-0">
                             <i class="fas fa-star"></i><br>
                             Keep training to unlock achievements!
@@ -249,7 +232,7 @@ function shareToTwitter() {
 }
 
 function shareToWhatsApp() {
-    const text = `🏃 Baru saja menyelesaikan training!\n\n📍 Jarak: ${<?= $activity['distance'] ?>} km\n⏱️ Durasi: ${<?= gmdate('H:i:s', $activity['duration']) ?>}\n🔥 Kalori: ${<?= $activity['calories_burned'] ?>} kcal\n\nYuk ikutan training!`;
+    const text = `🏃 Baru saja menyelesaikan training!\n\n📍 Jarak: ${<?= $activity['distance'] ?>} km\n⏱️ Durasi: ${<?= gmdate('H:i:s', $activity['duration']) ?>}\nYuk ikutan training!`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
 }
 </script>
