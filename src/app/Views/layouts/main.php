@@ -25,23 +25,22 @@
     <!-- Custom CSS -->
     <style>
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --warning-color: #f59e0b;
-            --info-color: #3b82f6;
-            --dark-color: #1f2937;
-            --light-color: #f9fafb;
+            --bs-primary: #FC4C02;
+            --bs-info: #FF8C42;
+            --bs-success: #22C55E;
+            --bs-danger: #EF4444;
+            --bs-warning: #F59E0B;
+            --bs-dark: #0F172A;
+            --bs-light: #F8FAFC;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--light-color);
         }
-        
+
         .gradient-bg {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);
         }
         
         .card {
@@ -55,16 +54,45 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-        
+
+        .icon-container {
+            border: 2px solid var(--bs-primary);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .icon-large {
+            font-size: 3rem;
+        }
+
         .btn-primary {
-            background: var(--primary-color);
-            border: none;
+            --bs-btn-color: #ffffff;
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: none;
+            --bs-btn-hover-bg: var(--bs-primary);
+            --bs-btn-hover-color: #ffffff;
+            --bs-btn-active-bg: var(--bs-info);
+            --bs-btn-active-border-color: var(--bs-primary);
         }
         
+        .btn-outline-primary {
+            --bs-btn-color: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-btn-hover-bg: var(--bs-info);
+            --bs-btn-hover-color: #ffffff;
+            --bs-btn-hover-border-color: var(--bs-primary);
+            --bs-btn-active-bg: var(--bs-info);
+            --bs-btn-active-border-color: var(--bs-primary);
+        }
+
         .btn-primary:hover {
-            background: var(--secondary-color);
+            background: var(--bs-info);
         }
-        
+
+        .text-primary {
+            color: var(--bs-primary);
+        }
+
         .sidebar {
             height: 100vh;
             position: fixed;
@@ -87,7 +115,7 @@
         
         .sidebar .nav-link:hover,
         .sidebar .nav-link.active {
-            background: var(--primary-color);
+            background: var(--bs-primary);  );
             color: white;
         }
         
@@ -102,12 +130,12 @@
             border-radius: 10px;
             color: white;
             margin-bottom: 20px;
-        }
+        } 
         
-        .stat-card.primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .stat-card.success { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
-        .stat-card.warning { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-        .stat-card.danger { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+        .stat-card.primary { background: var(--bs-primary) }
+        .stat-card.success { background: var(--bs-success) }
+        .stat-card.warning { background: var(--bs-warning) }
+        .stat-card.danger { background: var(--bs-danger) }
         
         @media (max-width: 768px) {
             .sidebar {

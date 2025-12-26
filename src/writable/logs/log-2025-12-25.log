@@ -1,0 +1,856 @@
+DEBUG - 2025-12-25 04:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 04:48:33 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#10 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#9 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2025-12-25 04:48:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: CLI, Route: db:seed/AdminSeeder]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+ 4 VENDORPATH/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 VENDORPATH/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 6 VENDORPATH/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2025-12-25 05:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 05:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 05:39:33 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#10 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#9 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2025-12-25 05:39:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: CLI, Route: db:seed/AdminSeeder]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+ 4 VENDORPATH/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 VENDORPATH/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 6 VENDORPATH/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2025-12-25 05:43:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'ci4_user'@'%' to database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#10 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'%' to database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#9 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2025-12-25 05:43:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'%' to database 'db_trackingapp'
+[Method: CLI, Route: db:seed/AdminSeeder]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+ 4 VENDORPATH/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 VENDORPATH/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 6 VENDORPATH/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2025-12-25 05:44:40 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#10 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#9 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2025-12-25 05:44:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_trackingapp'
+[Method: CLI, Route: db:seed/AdminSeeder]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+ 4 VENDORPATH/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 VENDORPATH/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 6 VENDORPATH/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2025-12-25 05:45:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#10 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#7 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#9 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#10 {main}
+CRITICAL - 2025-12-25 05:45:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_trackingapp'
+[Method: CLI, Route: db:seed/AdminSeeder]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/Config.php(111): CodeIgniter\Database\Database->loadForge()
+ 3 VENDORPATH/codeigniter4/framework/system/Database/Seeder.php(98): CodeIgniter\Database\Config::forge()
+ 4 VENDORPATH/codeigniter4/framework/system/Commands/Database/Seed.php(71): CodeIgniter\Database\Seeder->__construct()
+ 5 VENDORPATH/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+ 6 VENDORPATH/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 7 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand()
+ 9 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2025-12-25 05:45:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#11 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#12 {main}
+ERROR - 2025-12-25 05:46:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#11 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#12 {main}
+ERROR - 2025-12-25 05:46:48 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#12 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_trackingapp' in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(766): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(160): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(133): CodeIgniter\Boot::runCommand()
+#11 /home/anur123/Documents/TrackingApp/src/spark(87): CodeIgniter\Boot::bootSpark()
+#12 {main}
+DEBUG - 2025-12-25 09:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 09:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-25 10:23:52 --> Push notification sent to user 3 with type bmi_alert
+DEBUG - 2025-12-25 10:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 10:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 11:07:46 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2025-12-25 11:07:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login/authenticate]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-25 11:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 11:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 12:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 13:17:38 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2025-12-25 13:17:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login/authenticate]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-25 13:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 13:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 14:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 15:27:22 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 /home/anur123/Documents/TrackingApp/src/app/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2025-12-25 15:27:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login/authenticate]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH/codeigniter4/framework/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 VENDORPATH/codeigniter4/framework/system/BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/Auth/LoginController.php(51): CodeIgniter\BaseModel->first()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\LoginController->authenticate()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-25 15:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 15:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-25 16:11:49 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+#4 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /home/anur123/Documents/TrackingApp/src/app/Models/UserModel.php(83): CodeIgniter\Model->countAllResults()
+#6 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/DashboardController.php(30): App\Models\UserModel->getTotalUsersCount()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+#3 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 /home/anur123/Documents/TrackingApp/src/app/Models/UserModel.php(83): CodeIgniter\Model->countAllResults()
+#5 /home/anur123/Documents/TrackingApp/src/app/Controllers/Admin/DashboardController.php(30): App\Models\UserModel->getTotalUsersCount()
+#6 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+#7 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 /home/anur123/Documents/TrackingApp/src/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/anur123/Documents/TrackingApp/src/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 /home/anur123/Documents/TrackingApp/src/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/anur123/Documents/TrackingApp/src/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 /home/anur123/Documents/TrackingApp/src/system/rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2025-12-25 16:11:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/dashboard]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 465.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query()
+ 3 VENDORPATH/codeigniter4/framework/system/Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH/Models/UserModel.php(83): CodeIgniter\Model->countAllResults()
+ 5 APPPATH/Controllers/Admin/DashboardController.php(30): App\Models\UserModel->getTotalUsersCount()
+ 6 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Admin\DashboardController->index()
+ 7 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/anur123/Documents/TrackingApp/src/public/index.php')
+DEBUG - 2025-12-25 16:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:13:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-25 16:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

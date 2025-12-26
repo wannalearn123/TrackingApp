@@ -18,7 +18,7 @@ $this->section('page_content');
     
     <!-- Quick Stats -->
     <div class="row mb-4">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="stat-card primary">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -30,7 +30,7 @@ $this->section('page_content');
             </div>
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="stat-card success">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -42,7 +42,7 @@ $this->section('page_content');
             </div>
         </div>
         
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="stat-card warning">
                 <div class="d-flex justify-content-between align-items-center">
                     <div>

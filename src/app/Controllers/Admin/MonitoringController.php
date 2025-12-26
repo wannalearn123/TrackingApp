@@ -32,9 +32,15 @@ class MonitoringController extends BaseController
         ];
 
         $builder = $this->trainingActivityModel->select('training_activities.*, users.username, users.email')
+<<<<<<< HEAD
                                                 ->join('users', 'training_activities.user_id = users.id')
                                                 ->orderBy('training_activities.activity_date', 'DESC');
                                         
+=======
+                                               ->join('users', 'training_activities.user_id = users.id')
+                                               ->orderBy('training_activities.activity_date', 'DESC');
+
+>>>>>>> d92cf03c000faf925a26b9bd262cf32f9ae8e595
         if (!empty($filters['search'])) {
             $builder->groupStart()
                     ->like('users.username', $filters['search'])
@@ -43,6 +49,7 @@ class MonitoringController extends BaseController
         }
 
         if (!empty($filters['date_from'])) {
+<<<<<<< HEAD
             $builder->where('training_activities.activity_date >=', $filters['date_from'] . ' 00:00:00');
         }
 
@@ -52,6 +59,17 @@ class MonitoringController extends BaseController
         $activities = $builder->findAll();
         $data = [
             'activities' => $activities,
+=======
+            $builder->where('DATE(activity_date) >=', $filters['date_from']);
+        }
+
+        if (!empty($filters['date_to'])) {
+            $builder->where('DATE(activity_date) <=', $filters['date_to']);
+        }
+
+        $data = [
+            'activities' => $builder->asArray()->orderBy('training_activities.activity_date', 'DESC')->findAll(),
+>>>>>>> d92cf03c000faf925a26b9bd262cf32f9ae8e595
             'filters'    => $filters,
         ];
         

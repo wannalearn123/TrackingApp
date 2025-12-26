@@ -22,6 +22,11 @@ class HistoryController extends BaseController
      */
     public function index()
     {
+        $filters = [
+            'date_from' => $this->request->getGet('date'),
+            'date_to' => $this->request->getGet('date_to')
+        ];
+
         $userId = $this->session->get('user_id');
 
         // Get all activities
@@ -36,6 +41,18 @@ class HistoryController extends BaseController
 
         // Get physical data history (untuk lihat progress berat badan)
         $physicalData = $this->physicalDataModel->getLatestByUserId($userId);
+
+        if (!empty($filters['date_from'])) {
+            $activities = array_filter($activities, function($activity) use ($filters) {
+                return $activity['activity_date'] >= $filters['date_from'];
+            });
+        }
+
+        if (!empty($filters['date_to'])) {
+            $activities = array_filter($activities, function($activity) use ($filters) {
+                return $activity['activity_date'] <= $filters['date_to'];
+            }   );
+        }
 
         $data = [
             'activities'    => $activities,

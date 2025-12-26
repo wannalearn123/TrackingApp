@@ -22,7 +22,7 @@ $this->section('page_content');
     
     <!-- Summary Stats -->
     <div class="row mb-4">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-running fa-2x text-primary mb-2"></i>
@@ -31,7 +31,7 @@ $this->section('page_content');
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-route fa-2x text-success mb-2"></i>
@@ -40,7 +40,7 @@ $this->section('page_content');
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body text-center">
                     <i class="fas fa-clock fa-2x text-info mb-2"></i>

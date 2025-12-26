@@ -3,7 +3,7 @@ $this->extend('layouts/main');
 $this->section('content');
 ?>
 
-<div class="min-vh-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);">
+<div class="min-vh-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -20,8 +20,8 @@ $this->section('content');
                     </div>
                     <div class="card-body p-5 text-center gap-4">
                         <div class="mb-4">
-                            <i class="fas fa-running fa-5x text-primary mb-3"></i>
-                            <h1 class="display-5 fw-bold mb-3">Welcome to Training Tracking App</h1>
+                            <i class="fas fa-running fa-5x mb-3"></i>
+                            <h1 class="display-4 fw-bold mb-3">Welcome to Training Tracking App</h1>
                             <p class="lead text-muted mb-4">
                                 Your Personal Fitness Journey Companion
                             </p>

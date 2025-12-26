@@ -26,13 +26,13 @@ class TrainingActivitySeeder extends Seeder
         $insertCount = 0;
 
         foreach ($users as $user) {
-            // Generate 3-5 activities per user
-            $numActivities = rand(3, 5);
+            // Generate 3 activities per user
+            $numActivities = 3;
             
             for ($i = 0; $i < $numActivities; $i++) {
                 $daysAgo = rand(0, 30);
-                $duration = rand(20, 120); // minutes
-                
+                $duration = rand(20, 120) * 60; // seconds
+
                 $this->db->table('training_activities')->insert([
                     'user_id'        => $user['id'],
                     'duration'       => $duration,

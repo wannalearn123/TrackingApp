@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'tracking-app/training-tracker',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '670a30062b9ed760b25a9445a506f5fbcd407798',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -371,9 +371,9 @@
             'dev_requirement' => true,
         ),
         'tracking-app/training-tracker' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '670a30062b9ed760b25a9445a506f5fbcd407798',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
