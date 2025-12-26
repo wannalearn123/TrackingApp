@@ -54,7 +54,17 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-        
+
+        .icon-container {
+            border: 2px solid var(--bs-primary);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .icon-large {
+            font-size: 3rem;
+        }
+
         .btn-primary {
             --bs-btn-color: #ffffff;
             --bs-btn-bg: var(--bs-primary);
@@ -78,7 +88,11 @@
         .btn-primary:hover {
             background: var(--bs-info);
         }
-        
+
+        .text-primary {
+            color: var(--bs-primary);
+        }
+
         .sidebar {
             height: 100vh;
             position: fixed;

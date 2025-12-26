@@ -16,21 +16,21 @@ class NotificationService
         $this->userModel = new UserModel();
     }
 
-    public function sendWelcomeNotification(int $userId): bool
-    {
-        $recentNotifications = $this->notificationModel
-            ->where('user_id', $userId)
-            ->where('type', 'welcome')
-            ->findAll();        
-        if (!empty($recentNotifications)) {
-            return false; // Don't send duplicate welcome notification
-        }
-        $result = $this->notificationModel->createWelcomeNotification($userId);
-        if ($result) {
-            $this->sendPushNotification($userId, 'welcome');
-        }
-        return $result !== false;
-    }
+    // public function sendWelcomeNotification(int $userId): bool
+    // {
+    //     $recentNotifications = $this->notificationModel
+    //         ->where('user_id', $userId)
+    //         ->where('type', 'welcome')
+    //         ->findAll();        
+    //     if (!empty($recentNotifications)) {
+    //         return false; // Don't send duplicate welcome notification
+    //     }
+    //     $result = $this->notificationModel->createWelcomeNotification($userId);
+    //     if ($result) {
+    //         $this->sendPushNotification($userId, 'welcome');
+    //     }
+    //     return $result !== false;
+    // }
 
     /**
      * Send inactive user notification

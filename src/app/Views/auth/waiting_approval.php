@@ -5,10 +5,12 @@ $this->section('content');
 ?>
 
 <div class="min-vh-100 d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);">
-    <div class="waiting-container">
+    <div class="waiting-container ">
         <div class="card shadow-lg mb-4 p-5">
-            <div class="icon-container mb-4 text-center">
-                <i class="fas fa-clock"></i>
+            <div class="icon-container mb-4 text-center p-4 ">
+                <div class="icon-large">
+                    <i class="fas fa-clock"></i>
+                </div>
             </div>
             
             <h1>Pendaftaran Berhasil!</h1>
@@ -24,8 +26,8 @@ $this->section('content');
                 </ul>
             </div>
 
-            <a href="<?= base_url('login') ?>" class="btn btn-primary p-2">
-                <i class="fas fa-arrow-left me-2"></i> Kembali ke Login
+            <a href="<?= base_url('/') ?>" class="btn btn-primary p-3 fw-medium">
+                <i class="fas fa-arrow-left me-2"></i> Kembali
             </a>
         </div>
     </div>
