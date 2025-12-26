@@ -1,0 +1,574 @@
+DEBUG - 2025-12-19 01:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:21:53 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:26:41 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:27:53 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:29:01 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:29:12 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:31:04 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:31:25 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:31:32 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 01:31:50 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('2')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+WARNING - 2025-12-19 01:31:50 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(55): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('2')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 01:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 01:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-19 07:18:51 --> mysqli_sql_exception: Unknown table 'db_trackingapp.activities' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `activit...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activit...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activit...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activit...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\MonitoringController.php(50): CodeIgniter\Model->__call('get', Array)
+#6 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#13 {main}
+CRITICAL - 2025-12-19 07:18:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'db_trackingapp.activities'
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\MonitoringController.php(50): CodeIgniter\Model->__call('get', [])
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-19 07:18:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'db_trackingapp.activities'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(50): CodeIgniter\Model->__call('get', [])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-19 07:18:51 --> [Caused by] mysqli_sql_exception: Unknown table 'db_trackingapp.activities'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\MonitoringController.php(50): CodeIgniter\Model->__call('get', [])
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-19 07:19:43 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/monitoring]
+in APPPATH\Views\admin\monitoring\activities_list.php on line 69.
+ 1 APPPATH\Views\admin\monitoring\activities_list.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\activities_list.php', 69)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\activities_list.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/activities_list', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(53): view('admin/monitoring/activities_list', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-19 07:20:12 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: admin/monitoring]
+in APPPATH\Views\admin\monitoring\activities_list.php on line 69.
+ 1 APPPATH\Views\admin\monitoring\activities_list.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\activities_list.php', 69)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\activities_list.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/activities_list', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(53): view('admin/monitoring/activities_list', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-19 07:21:19 --> mysqli_sql_exception: Unknown table 'db_trackingapp.activities' in D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `activit...', 0)
+#1 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activit...')
+#2 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activit...')
+#3 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activit...', Array, false)
+#4 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\OTODIDAK\Tracking App\src\app\Controllers\Admin\MonitoringController.php(49): CodeIgniter\BaseModel->findAll()
+#7 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+#8 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+#9 D:\OTODIDAK\Tracking App\src\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\OTODIDAK\Tracking App\src\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 D:\OTODIDAK\Tracking App\src\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\OTODIDAK\Tracking App\src\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\OTODIDAK\Tracking App\src\system\rewrite.php(44): require_once('D:\\OTODIDAK\\Tra...')
+#14 {main}
+CRITICAL - 2025-12-19 07:21:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'db_trackingapp.activities'
+[Method: GET, Route: admin/monitoring]
+in VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php on line 684.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 2 VENDORPATH\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\MonitoringController.php(49): CodeIgniter\BaseModel->findAll()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-19 07:21:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'db_trackingapp.activities'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 332.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC')
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 4 VENDORPATH\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\MonitoringController.php(49): CodeIgniter\BaseModel->findAll()
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+CRITICAL - 2025-12-19 07:21:19 --> [Caused by] mysqli_sql_exception: Unknown table 'db_trackingapp.activities'
+in VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php on line 327.
+ 1 VENDORPATH\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC', 0)
+ 2 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC')
+ 3 VENDORPATH\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC')
+ 4 VENDORPATH\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `activities`.*, `users`.`username`, `users`.`email`
+FROM `training_activities`
+JOIN `users` ON `activities`.`user_id` = `users`.`id`
+WHERE `training_activities`.`deleted_at` IS NULL
+ORDER BY `activities`.`activity_date` DESC', [], false)
+ 5 VENDORPATH\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\codeigniter4\framework\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\MonitoringController.php(49): CodeIgniter\BaseModel->findAll()
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->index()
+ 9 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+10 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-19 07:22:01 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: admin/monitoring]
+in APPPATH\Controllers\Admin\MonitoringController.php on line 58.
+ 1 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('D:\\OTODIDAK\\Tracking App\\src\\vendor\\composer/../../app/Controllers/Admin/MonitoringController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Admin\\MonitoringController')
+ 3 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Admin\\MonitoringController', true)
+ 4 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 07:28:36 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(81): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('3')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-19 07:49:11 --> Push notification sent to user 4 with type bmi_alert
+DEBUG - 2025-12-19 07:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-12-19 07:49:29 --> Push notification sent to user 5 with type bmi_alert
+DEBUG - 2025-12-19 07:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-12-19 07:58:15 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(81): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('5')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+WARNING - 2025-12-19 07:58:15 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\admin\monitoring\user_detail.php on line 139.
+ 1 APPPATH\Views\admin\monitoring\user_detail.php(139): htmlspecialchars(null)
+ 2 VENDORPATH\codeigniter4\framework\system\View\View.php(226): include('D:\\OTODIDAK\\Tracking App\\src\\app\\Views\\admin\\monitoring\\user_detail.php')
+ 3 VENDORPATH\codeigniter4\framework\system\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/monitoring/user_detail', [], true)
+ 5 APPPATH\Controllers\Admin\MonitoringController.php(81): view('admin/monitoring/user_detail', [...])
+ 6 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin\MonitoringController->userDetail('5')
+ 7 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\MonitoringController))
+ 8 VENDORPATH\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\OTODIDAK\\Tracking App\\src\\public\\index.php')
+DEBUG - 2025-12-19 07:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 07:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 08:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 08:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-19 08:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

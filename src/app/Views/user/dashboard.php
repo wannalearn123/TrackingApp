@@ -95,7 +95,7 @@ $this->section('page_content');
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header bg-white">
-                    <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i> Progress 7 Hari Terakhir</h5>
+                    <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i> Progress Latihan</h5>
                 </div>
                 <div class="card-body">
                     <canvas id="progressChart"></canvas>

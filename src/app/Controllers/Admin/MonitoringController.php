@@ -25,8 +25,34 @@ class MonitoringController extends BaseController
      */
     public function index()
     {
+        $filters = [
+            'search'    => $this->request->getGet('search'),
+            'date_from' => $this->request->getGet('date_from'),
+            'date_to'   => $this->request->getGet('date_to'),
+        ];
+
+        $builder = $this->trainingActivityModel->select('training_activities.*, users.username, users.email')
+                                                ->join('users', 'training_activities.user_id = users.id')
+                                                ->orderBy('training_activities.activity_date', 'DESC');
+                                        
+        if (!empty($filters['search'])) {
+            $builder->groupStart()
+                    ->like('users.username', $filters['search'])
+                    ->orLike('users.email', $filters['search'])
+                    ->groupEnd();
+        }
+
+        if (!empty($filters['date_from'])) {
+            $builder->where('training_activities.activity_date >=', $filters['date_from'] . ' 00:00:00');
+        }
+
+        if (!empty($filters['date_to'])) {
+            $builder->where('training_activities.activity_date <=', $filters['date_to'] . ' 23:59:59');
+        }
+        $activities = $builder->findAll();
         $data = [
-            'activities' => $this->trainingActivityModel->getAllActivitiesWithUsers(),
+            'activities' => $activities,
+            'filters'    => $filters,
         ];
         
         return view('admin/monitoring/activities_list', $data);

@@ -107,8 +107,8 @@
             </ul>
         </div>
         
-        <a href="<?= base_url('login') ?>" class="btn-back">
-            <i class="fas fa-arrow-left me-2"></i> Kembali ke Login
+        <a href="<?= base_url('/') ?>" class="btn-back">
+            <i class="fas fa-arrow-left me-2"></i> Kembali
         </a>
     </div>
     

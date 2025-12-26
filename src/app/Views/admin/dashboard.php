@@ -47,7 +47,7 @@ $this->section('page_content');
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
                         <h3 class="mb-0"><?= $active_users ?? 0 ?></h3>
-                        <p class="mb-0">Active Today</p>
+                        <p class="mb-0">Active Users</p>
                     </div>
                     <i class="fas fa-running fa-3x opacity-50"></i>
                 </div>
@@ -97,7 +97,7 @@ $this->section('page_content');
                                         (<?= esc($user['bmi_category']) ?>)
                                     </small>
                                 </div>
-                                <a href="<?= base_url('admin/monitoring/user/' . $user['id']) ?>" 
+                                <a href="<?= base_url('admin/monitoring/user/' . $user['user_id']) ?>" 
                                    class="btn btn-sm btn-outline-primary">
                                     <i class="fas fa-eye"></i>
                                 </a>

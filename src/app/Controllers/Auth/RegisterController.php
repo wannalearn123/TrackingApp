@@ -13,7 +13,6 @@ class RegisterController extends BaseController
     {
         $this->userModel = new UserModel();
     }
-
     /**
      * Display registration form
      */
@@ -75,6 +74,8 @@ class RegisterController extends BaseController
         ];
 
         if ($this->userModel->insert($data)) {
+
+            // kirim notifikasi selamat datang            
             return redirect()->to('/waiting-approval')->with('success', 'Registrasi berhasil! Menunggu persetujuan admin');
         } else {
             return redirect()->back()->withInput()->with('error', 'Registrasi gagal. Silakan coba lagi');

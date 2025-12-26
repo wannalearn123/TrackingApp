@@ -58,7 +58,6 @@ $this->section('page_content');
                             <th>Jarak</th>
                             <th>Durasi</th>
                             <th>Kecepatan</th>
-                            <th>Kalori</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

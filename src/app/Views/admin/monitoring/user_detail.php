@@ -174,19 +174,28 @@ $this->section('page_content');
 <?php $this->section('scripts'); ?>
 <script>
 // Progress Chart
-const progressData = <?= json_encode($chart_data ?? ['labels' => [], 'distances' => []]) ?>;
+const progressData = <?= json_encode($activities ?? ['labels' => [], 'distances' => []]) ?>;
+
+console.log(progressData)
+
+const labels = progressData.map(activity => {
+    const date = new Date(activity.activity_date);
+    return `${date.getDate()}/${date.getMonth() + 1}`;
+});
+
+const distances = progressData.map(activity => activity.distance);
 
 const ctx = document.getElementById('progressChart').getContext('2d');
 new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-        labels: progressData.labels,
+        labels: labels,
         datasets: [
             {
                 label: 'Jarak (km)',
-                data: progressData.distances,
-                borderColor: '#667eea',
-                backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                data: distances,
+                borderColor: '#264effff',
+                backgroundColor: 'rgb(102, 126, 234)',
                 tension: 0.4
             },
         ]
@@ -195,6 +204,10 @@ new Chart(ctx, {
         responsive: true,
         scales: {
             y: {
+                title: {
+                    display: true,
+                    text: 'Jarak (km)'
+                },
                 beginAtZero: true,
                 position: 'left'
             },
