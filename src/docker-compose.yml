@@ -1,0 +1,30 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:80"  # Host port 8000 -> container port 80
+    volumes:
+      - .:/var/www/html  # Mount kode app ke /var/www/html
+    depends_on:
+      - db
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public  # Jika CI4, root di public/
+    command: apache2-foreground  # Jalankan Apache
+    # harus tambahkan libicu-dev dan docker-php-ext-install intl dan mysqli dulu
+  db:
+    image: mysql:8.0 # Image MySQL
+    ports:
+      - "3306:3306"  # Expose MySQL port
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Password root
+      MYSQL_DATABASE: trackingapp  # Nama DB
+      MYSQL_USER: user  # User DB
+      MYSQL_PASSWORD: password  # Password user
+      MYSQL_COMMAND: --sql_mode=""
+    volumes:
+      - db_data:/var/lib/mysql  # Persist data DB
+
+volumes:
+  db_data:  # Volume untuk data DB

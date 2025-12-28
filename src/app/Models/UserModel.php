@@ -112,7 +112,7 @@ class UserModel extends Model
                     ->join('user_physical_data', 'user_physical_data.user_id = users.id', 'left')
                     ->where('users.role', 'user')
                     ->where('users.is_approved', 1)
-                    ->groupBy('users.id')
+                    // ->groupBy('users.id')
                     ->orderBy('user_physical_data.updated_at', 'DESC')
                     ->findAll();
     }
@@ -128,7 +128,7 @@ class UserModel extends Model
                     ->join('training_activities', 'training_activities.user_id = users.id', 'left')
                     ->where('users.role', 'user')
                     ->where('users.is_approved', 1)
-                    ->groupBy('users.id')
+                    // ->groupBy('users.id')
                     ->having('MAX(training_activities.activity_date) <', $dateThreshold)
                     ->orHaving('MAX(training_activities.activity_date) IS NULL')
                     ->findAll();

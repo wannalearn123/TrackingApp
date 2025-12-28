@@ -116,7 +116,7 @@ class PhysicalDataModel extends Model
         return $this->select('user_physical_data.*, users.username, users.email')
                     ->join('users', 'users.id = user_physical_data.user_id')
                     ->whereIn('bmi_category', ['overweight', 'obese'])
-                    ->groupBy('user_id')
+                    // ->groupBy('user_id')
                     ->findAll();
     }
 }
