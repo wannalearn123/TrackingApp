@@ -140,14 +140,17 @@
         @media (max-width: 768px) {
             .sidebar {
                 margin-left: -250px;
+                z-index: 1050;
             }
             
             .sidebar.show {
                 margin-left: 0;
+                z-index: 1050;
             }
             
             .main-content {
                 margin-left: 0;
+                z-index: 1;
             }
         }
     </style>
