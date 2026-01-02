@@ -1,0 +1,244 @@
+CRITICAL - 2026-01-01 22:57:07 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session925c515af7345c5eadd4c1260debc454', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('925c515af7345c5eadd4c1260debc454')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-01 22:57:07 --> ErrorException: Uncaught ErrorException: chmod(): Operation not permitted in /var/www/html/vendor/codeigniter4/framework/system/Log/Handlers/FileHandler.php:124
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operat...', '/var/www/html/v...', 124)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Log/Handlers/FileHandler.php(124): chmod('/var/www/html/w...', 420)
+#2 /var/www/html/vendor/codeigniter4/framework/system/Log/Logger.php(271): CodeIgniter\Log\Handlers\FileHandler->handle('critical', 'ErrorException:...')
+#3 /var/www/html/system/Common.php(785): CodeIgniter\Log\Logger->log('critical', 'ErrorException:...', Array)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Debug/Exceptions.php(134): log_message('critical', 'ErrorException:...', Array)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+chmod(): Operation not permitted
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operat...', '/var/www/html/v...', 149)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/w...', 384)
+#2 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('925c515af7345c5...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Session/Session.php(912): session_start()
+#4 /var/www/html/vendor/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+#5 /var/www/html/system/Config/Services.php(715): CodeIgniter\Session\Session->start()
+#6 /var/www/html/system/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 /var/www/html/system/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 /var/www/html/system/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 /var/www/html/system/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 /var/www/html/app/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#12 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#13 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 /var/www/html/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#15 /var/www/html/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 /var/www/html/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Log/Handlers/FileHandler.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-01-01 22:58:35 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_sessioncc6817b4956291b65af57132c1a1a90c', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('cc6817b4956291b65af57132c1a1a90c')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 22:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:06:41 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session04fb915b48536d7566b050eaa0cf3216', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('04fb915b48536d7566b050eaa0cf3216')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(388): session_regenerate_id(false)
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(252): CodeIgniter\Session\Session->regenerate(false)
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 23:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:08:13 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session1449b95a5f3ec730b43fffa7bd9cbf2e', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('1449b95a5f3ec730b43fffa7bd9cbf2e')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 23:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:09:51 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session42cc09ce063c6bc67c3901d434c46b0d', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('42cc09ce063c6bc67c3901d434c46b0d')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 23:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:10:55 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session598ae9c74dc08137840e764618e14a00', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('598ae9c74dc08137840e764618e14a00')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 23:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:12:44 --> ParseError: syntax error, unexpected token "<<"
+[Method: GET, Route: register]
+in APPPATH/Controllers/Auth/RegisterController.php on line 80.
+ 1 VENDORPATH/composer/ClassLoader.php(433): Composer\Autoload\{closure}('/var/www/html/vendor/composer/../../app/Controllers/Auth/RegisterController.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Auth\\RegisterController')
+ 3 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(885): class_exists('\\App\\Controllers\\Auth\\RegisterController', true)
+ 4 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-01-01 23:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-01-01 23:14:40 --> Push notification sent to user 2 with type bmi_alert
+DEBUG - 2026-01-01 23:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-01 23:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-01 23:14:45 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session7ec5a6e05bd33854c889fffdd09b477f', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('7ec5a6e05bd33854c889fffdd09b477f')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-01 23:14:59 --> ErrorException: chmod(): Operation not permitted
+[Method: GET, Route: /]
+in VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php on line 149.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): Operation not permitted', '/var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/FileHandler.php', 149)
+ 2 VENDORPATH/codeigniter4/framework/system/Session/Handlers/FileHandler.php(149): chmod('/var/www/html/writable/session/ci_session33ee8df4e37339a98eb13fd6f64bc903', 384)
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read('33ee8df4e37339a98eb13fd6f64bc903')
+ 4 VENDORPATH/codeigniter4/framework/system/Session/Session.php(912): session_start()
+ 5 VENDORPATH/codeigniter4/framework/system/Session/Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(715): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH/Config/Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(52): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+14 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

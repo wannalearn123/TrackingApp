@@ -77,13 +77,7 @@ class RegisterController extends BaseController
         ];
 
         if ($this->userModel->insert($data)) {
-<<<<<<< HEAD
-
-            // kirim notifikasi selamat datang            
-=======
-            // Send welcome notification
             // $this->notificationService->sendWelcomeNotification($this->re->());
->>>>>>> d92cf03c000faf925a26b9bd262cf32f9ae8e595
             return redirect()->to('/waiting-approval')->with('success', 'Registrasi berhasil! Menunggu persetujuan admin');
         } else {
             return redirect()->back()->withInput()->with('error', 'Registrasi gagal. Silakan coba lagi');
