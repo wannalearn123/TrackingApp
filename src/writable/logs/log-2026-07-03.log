@@ -1,0 +1,99 @@
+DEBUG - 2026-07-03 05:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-03 05:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-03 05:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-03 05:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-03 06:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-03 06:00:04 --> mysqli_sql_exception: Table 'trackingapp.users' doesn't exist in /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /var/www/html/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 /var/www/html/vendor/codeigniter4/framework/system/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/vendor/codeigniter4/framework/system/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('agung nur', 'users.username', Array)
+#6 /var/www/html/vendor/codeigniter4/framework/system/Validation/Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung nur', 'users.username', Array, NULL, 'username')
+#7 /var/www/html/vendor/codeigniter4/framework/system/Validation/Validation.php(201): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung nur', Array, Array, 'username')
+#8 /var/www/html/vendor/codeigniter4/framework/system/Controller.php(136): CodeIgniter\Validation\Validation->run()
+#9 /var/www/html/app/Controllers/Auth/RegisterController.php(66): CodeIgniter\Controller->validate(Array, Array)
+#10 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\RegisterController->store()
+#11 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\RegisterController))
+#12 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 /var/www/html/system/Boot.php(363): CodeIgniter\CodeIgniter->run()
+#14 /var/www/html/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 /var/www/html/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+CRITICAL - 2026-07-03 06:00:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'trackingapp.users' doesn't exist
+[Method: POST, Route: register/store]
+in VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php on line 684.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 VENDORPATH/codeigniter4/framework/system/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH/codeigniter4/framework/system/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('agung nur', 'users.username', [...])
+ 4 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung nur', 'users.username', [...], null, 'username')
+ 5 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(201): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung nur', [...], [...], 'username')
+ 6 VENDORPATH/codeigniter4/framework/system/Controller.php(136): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH/Controllers/Auth/RegisterController.php(66): CodeIgniter\Controller->validate([...], [...])
+ 8 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\RegisterController->store()
+ 9 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\RegisterController))
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-03 06:00:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'trackingapp.users' doesn't exist
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 332.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'agung nur\'
+ LIMIT 1')
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'agung nur\'
+ LIMIT 1')
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 VENDORPATH/codeigniter4/framework/system/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH/codeigniter4/framework/system/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('agung nur', 'users.username', [...])
+ 6 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung nur', 'users.username', [...], null, 'username')
+ 7 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(201): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung nur', [...], [...], 'username')
+ 8 VENDORPATH/codeigniter4/framework/system/Controller.php(136): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH/Controllers/Auth/RegisterController.php(66): CodeIgniter\Controller->validate([...], [...])
+10 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\RegisterController->store()
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\RegisterController))
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-03 06:00:04 --> [Caused by] mysqli_sql_exception: Table 'trackingapp.users' doesn't exist
+in VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php on line 327.
+ 1 VENDORPATH/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query('SELECT 1
+FROM `users`
+WHERE `username` = \'agung nur\'
+ LIMIT 1', 0)
+ 2 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `username` = \'agung nur\'
+ LIMIT 1')
+ 3 VENDORPATH/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `username` = \'agung nur\'
+ LIMIT 1')
+ 4 VENDORPATH/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 VENDORPATH/codeigniter4/framework/system/Validation/Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH/codeigniter4/framework/system/Validation/StrictRules/Rules.php(187): CodeIgniter\Validation\Rules->is_unique('agung nur', 'users.username', [...])
+ 7 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('agung nur', 'users.username', [...], null, 'username')
+ 8 VENDORPATH/codeigniter4/framework/system/Validation/Validation.php(201): CodeIgniter\Validation\Validation->processRules('username', 'username', 'agung nur', [...], [...], 'username')
+ 9 VENDORPATH/codeigniter4/framework/system/Controller.php(136): CodeIgniter\Validation\Validation->run()
+10 APPPATH/Controllers/Auth/RegisterController.php(66): CodeIgniter\Controller->validate([...], [...])
+11 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\Auth\RegisterController->store()
+12 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\RegisterController))
+13 VENDORPATH/codeigniter4/framework/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
